@@ -55,5 +55,39 @@
 # print(total)
 
 
+# numbers=[1,2,3,4,5]
+# numbers.append(6)
+# print(numbers)
+
+# rishabh
+# my_list = [8, 10, 6, 2, 4]
+# print(my_list) 
+# count = 0
+# for i in range(len(my_list)):
+#     for j in range(i + 1, len(my_list)):
+#         count += 1
+#         if my_list[i] > my_list[j]:
+#             my_list[i], my_list[j] = my_list[j], my_list[i] 
+# print(my_list)
+# print(count)
+
+# sirr
+# my_list=[1,2,3,4,5]
+# # my_list=[8,10,6,2,4]
+# swapped= True
+# count=0
+# index=0
+# while swapped:
+#     swapped= False 
+#     for i in range(len(my_list)-1-index):
+#          count+=1
+#          if my_list[i]>my_list[i+1]:
+#             swapped = True
+#             my_list[i],my_list[i+1]= my_list[i+1],my_list[i]
+# print(my_list)
+# print(count)
 
 
+my_list = [8, 10, 6, 2, 4] 
+my_list.sort() 
+print(my_list)
