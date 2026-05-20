@@ -88,6 +88,40 @@
 # print(count)
 
 
-my_list = [8, 10, 6, 2, 4] 
-my_list.sort() 
-print(my_list)
+# my_list = [8, 10, 6, 2, 4] 
+# my_list.sort() 
+# print(my_list)
+# my_list.reverse()
+# print(my_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[1:3]
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[1:-1]
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[-1:1] 
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[:3] 
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[3:] 
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# del my_list[1:3] 
+# print(my_list)
+
+
+# my_list = [10, 8, 6, 4, 2] 
+# del my_list[:] 
+# print(my_list)
+
+list=[1,2,3,4,5]
+print(5 not in the list)
