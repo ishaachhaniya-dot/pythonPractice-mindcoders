@@ -116,12 +116,66 @@
 
 # my_list = [10, 8, 6, 4, 2] 
 # del my_list[1:3] 
-# print(my_list)
+# # print(my_list)
 
 
-# my_list = [10, 8, 6, 4, 2] 
-# del my_list[:] 
-# print(my_list)
+# # my_list = [10, 8, 6, 4, 2] 
+# # del my_list[:] 
+# # print(my_list)
 
-list=[1,2,3,4,5]
-print(5 not in the list)
+# # row=[]
+# # for i in range(8):
+# #     row.append("WHITE_PAWN")
+# # print(row)
+
+# # row=["WHITE_PAWN" for i in range(8)]
+# # print(row)
+
+# # squares=[ x **2 for x in range(10)]
+# # print(squares)
+
+# # twos=[2** index for index in range(10)]
+# # print(twos)
+
+# # squares = [index ** 2 for index in range(10)]
+# # # odds=[index for index in squares if index %2 != 0]
+# # # print(odds) 
+
+# # even = [index for index in squares if index %2 ==0]
+# # # print(even)
+
+# # board =[]
+# # for i in range(8):
+# #     row =["EMPTY" for i in range(8)]
+# #     board.append(row)
+
+# board = []
+# for i in range(8):
+#      row = ["EMPTY" for i in range(8)]  
+#      board.append(row)
+
+# print(board)
+
+     
+# board[0][0]="ROOK"
+# board[0][7]="ROOK"
+# board[7][0]="ROOK"
+# board[7][7]="ROOK"
+
+# print("------------")
+
+# for element in board:
+#     print(element)
+
+# board[0][1]="KNIGHT"
+# board[0][6]="KNIGHT"
+# board[7][1]="KNIGHT"
+# board[7][6]="KNIGHT"
+# print("------------")
+# for element in board:
+#     print(element)
+
+temps = [[0.0 for h in range(24)] for d in range(31)]
+for element in temps:
+    print(element)
+print(len(temps))
