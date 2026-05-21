@@ -162,46 +162,66 @@
 # board[7][0]="ROOK"
 # board[7][7]="ROOK"
 
-# print("------------")
+# # print("------------")
 
-# for element in board:
+# # for element in board:
+# #     print(element)
+
+# # board[0][1]="KNIGHT"
+# # board[0][6]="KNIGHT"
+# # board[7][1]="KNIGHT"
+# # board[7][6]="KNIGHT"
+# # print("------------")
+# # for element in board:
+# #     print(element)
+
+# temps = [[0.0 for h in range(24)] for d in range(31)]
+# temp1 = 19
+# temp2 = 32
+# count = 0
+
+
+# for days in temps:
+#     if count== 0:
+#         days[11]=temp1
+#         count = 1
+#     else:
+#         days[11]= temp2
+#         count=0
+
+# for element in temps:
 #     print(element)
 
-# board[0][1]="KNIGHT"
-# board[0][6]="KNIGHT"
-# board[7][1]="KNIGHT"
-# board[7][6]="KNIGHT"
-# print("------------")
-# for element in board:
-#     print(element)
+# total=0.0
+# for days in temps:
+#     total+=days[11]
+# average = total/31
+# print("Average temperature at noon:",average)
 
-temps = [[0.0 for h in range(24)] for d in range(31)]
-temp1 = 30
-temp2 = 32
-count = 0
+# highest = -100.0 
+# for day in temps:
+#      for temp in day:
+#         if temp > highest:
+#             highest = temp
+# print("Highest temp:",highest)
 
 
-for days in temps:
-    if count== 0:
-        days[11]=temp1
-        count = 1
-    else:
-        days[11]= temp2
-        count=0
+# hot_days=0
+# for day in temps:
+#     if day[11]>20.0:
+#         hot_days +=1
+# print(hot_days,"days were hot")
 
-for element in temps:
-    print(element)
+rooms = [[[False for r in range(20)] for f in range(15)]for t in range(3)]
+print(rooms)
 
-total=0.0
-for days in temps:
-    total+=days[11]
-average = total/31
-print("Average temperature at noon:",average)
+rooms[1][9][13] = True
+rooms[0][4][1]= True
 
-highest = -100.0 
-for day in temps:
-     for temp in day:
-        if temp > highest:
-            highest = temp
-print("Highest temp:",highest)
-                        
+vacancy=0
+for room_number in range(20):
+    # if not rooms[2][14][room_number]:
+    if not rooms[1][9][room_number]:
+
+        vacancy+=1
+print("vacancy in 3rd 15th floor",vacancy)
