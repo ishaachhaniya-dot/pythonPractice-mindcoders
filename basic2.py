@@ -279,15 +279,44 @@
 # print("Print #5:", my_list_2)
 
 
-def my_function(my_list_1):
-        print("Print #1:", my_list_1)
-        print("Print #2:", my_list_2)
-        del my_list_1[0]
-        print("Print #3:", my_list_1)
-        print("Print #4:", my_list_2) 
+# def my_function(my_list_1):
+#         print("Print #1:", my_list_1)
+#         print("Print #2:", my_list_2)
+#         del my_list_1[0]
+#         print("Print #3:", my_list_1)
+#         print("Print #4:", my_list_2) 
         
-my_list_2 = [2, 3]
-my_function(my_list_2)
-print("Print #5:", my_list_2)
+# my_list_2 = [2, 3]
+# my_function(my_list_2)
+# print("Print #5:", my_list_2)
+
+# def countdown(number):
+#     print(number)
+
+#     if number==0:
+#         return
+#     else:
+#         print("going in rec:",number)
+#         countdown(number-1)
+#         print("out",number)
+# print("Starting recursion")
+# countdown(5)
+# print(" Ending recursion")
 
 
+# def factorial(number):
+#     if number <=0:
+#         return 1
+#     else:
+#         return number * factorial(number-1)
+# print(factorial(5))
+    
+my_tuple = (1, 10, 100)
+t1 = my_tuple + (1000, 10000) 
+t2 = my_tuple * 3 
+print(len(t2)) 
+print(t1)
+print(t2)
+print(10 in my_tuple)
+print(-10 not in my_tuple)
+    
