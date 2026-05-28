@@ -410,9 +410,72 @@
 # item = pol_eng_dictionary["zamek"] 
 # print(item) 
 
-phonebook = {}
-print(phonebook)
-phonebook["Adam"] = 3456783958 
-print(phonebook)
-del phonebook["Adam"]
-print(phonebook)
+# phonebook = {}
+# print(phonebook)
+# phonebook["Adam"] = 3456783958 
+# print(phonebook)
+# del phonebook["Adam"]
+# # print(phonebook)
+
+# pol_eng_dictionary ={
+#     "zameek":"castle",
+#     "woda":"water",
+#     "gleba":"soil",
+# }
+# # if "zameek" in pol_eng_dictionary:
+# #     print("yes")
+# # else:
+# #     print("nos")
+
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# del pol_eng_dictionary["zameek"]
+# print(pol_eng_dictionary)
+# print(len(pol_eng_dictionary))
+
+# pol_eng_dictionary.clear()
+# print(len(pol_eng_dictionary))
+
+student = {}
+
+while True:
+        name = input("Enter student name")
+        if name=='':
+             break
+        score = int(input("enter student score"))
+        if score not in range(1,11):
+             break
+        if name in student:
+             student[name]+=(score,)
+        else:
+             student[name]=(score,)
+# for mark in student:
+#         print(mark)
+print(student)    
+
+for name,score in student.items():
+      sum=0
+      for s in score:
+            sum+=s
+      print(name,"->",sum/len(score))
+
+student={}
+while True:
+      name=input("enter name:")
+      if name=='':
+            break
+      score = int(input("enter score:"))
+      if score not in range(1,11):
+            break
+      if name in student:
+            student[name]+=(score,)
+      else:
+            student[name]=(score,)
+print(student)
+for name,score in student.items():
+        sum=0
+        for s in score:
+              print(name,"->",sum/len(score))
+
+
