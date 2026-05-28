@@ -111,5 +111,10 @@
 #     print(i,"missisipi")
 # print("ready or not,here i come")
 
-squares=[x for x in squares if i%2==0]
-print(squares)
+
+
+board = []
+EMPTY = 0
+for i in range(8):
+        row = [EMPTY for i in range(8)]
+        board.append(row)
