@@ -437,45 +437,100 @@
 # pol_eng_dictionary.clear()
 # print(len(pol_eng_dictionary))
 
-student = {}
+# student = {}
 
-while True:
-        name = input("Enter student name")
-        if name=='':
-             break
-        score = int(input("enter student score"))
-        if score not in range(1,11):
-             break
-        if name in student:
-             student[name]+=(score,)
-        else:
-             student[name]=(score,)
-# for mark in student:
-#         print(mark)
-print(student)    
+# while True:
+#         name = input("Enter student name")
+#         if name=='':
+#              break
+#         score = int(input("enter student score"))
+#         if score not in range(1,11):
+#              break
+#         if name in student:
+#              student[name]+=(score,)
+#         else:
+#              student[name]=(score,)
+# # for mark in student:
+# #         print(mark)
+# print(student)    
 
-for name,score in student.items():
-      sum=0
-      for s in score:
-            sum+=s
-      print(name,"->",sum/len(score))
+# for name,score in student.items():
+#       sum=0
+#       for s in score:
+#             sum+=s
+#       print(name,"->",sum/len(score))
 
-student={}
-while True:
-      name=input("enter name:")
-      if name=='':
-            break
-      score = int(input("enter score:"))
-      if score not in range(1,11):
-            break
-      if name in student:
-            student[name]+=(score,)
-      else:
-            student[name]=(score,)
-print(student)
-for name,score in student.items():
-        sum=0
-        for s in score:
-              print(name,"->",sum/len(score))
+# student={}
+# while True:
+#       name=input("enter name:")
+#       if name=='':
+#             break
+#       score = int(input("enter score:"))
+#       if score not in range(1,11):
+#             break
+#       if name in student:
+#             student[name]+=(score,)
+#       else:
+#             student[name]=(score,)
+# print(student)
+# for name,score in student.items():
+#         sum=0
+#         for s in score:
+#               print(name,"->",sum/len(score))
 
+# class ThisIsMyFirstClass:
+#      name="isha"
+#      age=21
 
+#      def getName(self):
+#           print(self.name)
+# firstObject = ThisIsMyFirstClass()
+# print(firstObject)
+# firstObject.getName()
+
+# class Student:
+#     def __init__(self):
+#         self.name = ""
+#         self.age=0
+#         self.gender=""
+#         self.grade=""
+
+# isha = Student()
+# print(isha)
+
+# isha.name="isha achhaniya"
+# isha.age=21
+# isha.gender="female"
+# isha.grade= "2nd yr"
+
+# print(isha.name)
+# print(isha.age)
+# print(isha.gender)
+# print(isha.grade)
+
+class Student:
+    def __init__(self,name,age,gender,grade):
+        self.grade = grade
+        self.name=name
+        self.age=age
+        self.gender=gender
+
+    def printDetails(self):
+        print("Name:",self.name)
+        print("Age:",self.age)
+        print("Gender:",self.gender)
+        print("Grade:",self.grade)
+
+isha = Student("isha achhaniya",21,"female","2nd year")
+print(isha)
+
+# isha.name="isha achhaniya"
+# isha.age=21
+# isha.gender="female"
+# isha.grade= "2nd yr"
+
+# print(isha.name)
+# print(isha.age)
+# print(isha.gender)
+# print(isha.grade)
+isha.printDetails()
