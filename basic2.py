@@ -508,29 +508,81 @@
 # print(isha.gender)
 # print(isha.grade)
 
-class Student:
-    def __init__(self,name,age,gender,grade):
-        self.grade = grade
-        self.name=name
-        self.age=age
-        self.gender=gender
+# class Student:
+#     def __init__(self,name,age,gender,grade):
+#         self.grade = grade
+#         self.name=name
+#         self.age=age
+#         self.gender=gender
 
-    def printDetails(self):
-        print("Name:",self.name)
-        print("Age:",self.age)
-        print("Gender:",self.gender)
-        print("Grade:",self.grade)
+#     def printDetails(self):
+#         print("Name:",self.name)
+#         print("Age:",self.age)
+#         print("Gender:",self.gender)
+#         print("Grade:",self.grade)
 
-isha = Student("isha achhaniya",21,"female","2nd year")
-print(isha)
+# isha = Student("isha achhaniya",21,"female","2nd year")
+# print(isha)
 
-# isha.name="isha achhaniya"
-# isha.age=21
-# isha.gender="female"
-# isha.grade= "2nd yr"
+# isha.printDetails()
 
-# print(isha.name)
-# print(isha.age)
-# print(isha.gender)
-# print(isha.grade)
-isha.printDetails()
+# class ExampleClass:
+#     def __init__(self,val=1):
+#         self.first = val
+#     def set_second(self,val):
+#         self.second = val
+
+# object_1=ExampleClass()
+# object_2=ExampleClass(2)
+# object_2.set_second(3)
+# object_3=ExampleClass(4)
+# object_3.third = 5
+
+# print(object_1.__dict__)
+# print(object_2.__dict__)
+# print(object_3.__dict__)
+
+# class classy:
+#     def method(self,par):
+#         print("method",par)
+# obj=classy() 
+# obj.method(1)       
+
+# class classy:
+#     vria=2
+#     def method(self):
+#         print(self.vria,self.var)
+# obj=classy()
+# obj.var=3
+# obj.method()
+
+# class star:
+#     def __init__(self,name,galaxy):
+#         self.name=name
+#         self.galaxy=galaxy
+
+#     def __str__(self):
+#         return self.name  + ' in '+  self.galaxy
+# sun = star("sun","milky way")
+# print(sun)
+
+# class vehicle:
+#     pass
+# class landvehicle(vehicle):
+#     pass
+# class trackedvehicle(landvehicle):
+#     pass
+# for cls1 in [vehicle,landvehicle,trackedvehicle]:
+#     for cls2 in [vehicle,landvehicle,trackedvehicle]:
+#         print(issubclass(cls1,cls2),end="\t")
+#     print()
+
+class Super:
+    supvar =1
+
+class Sub(Super):
+    subvar = 2
+
+obj = Sub()
+print(obj.subvar)
+print(obj.supvar)
