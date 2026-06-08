@@ -111,4 +111,18 @@
 #     print(i,"missisipi")
 # print("ready or not,here i come")
 
+class ExampleClass():
+    def __init__(self,val=1):
+        self.first=val
+    def set_second(self,2):
+        self.second=val
 
+obj1=ExampleClass()
+obj2=ExampleClass(2)
+obj2.set_second(3)
+obj3=ExampleClass(4)
+obj3.__third=5
+
+print(obj1.__dict__)
+print(obj2.__dict__)
+print(obj3.__dict__)
