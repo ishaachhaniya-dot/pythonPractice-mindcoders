@@ -632,6 +632,10 @@ class Exampleclasss:
         else:
             self.b=1
 example_object=Exampleclasss(8)
-
-# print(example_object.a)
-print(example_object.b)
+try:
+    print("a-->",example_object.a)
+except AttributeError:
+    try:
+        print("b-->",example_object.b)
+    except AttributeError:
+        print("the error has occured! silently passing it!")
