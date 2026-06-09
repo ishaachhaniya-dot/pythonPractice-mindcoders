@@ -737,20 +737,49 @@
 # class Sub(Super):
 #     def __init__(self, name):
 #         super().__init__(name)
-# obj =Sub("isha")
-# print(obj)
+# # obj =Sub("isha")
+# # print(obj)
 
-class SuperA:
-    var_a=10
-    def fun_a(self):
-        return 11
+# class SuperA:
+#     var_a=10
+#     def fun_a(self):
+#         return 11
     
-class SuperB:
-    var_b=20
-    def fun_b(self):
-        return 21
-class Sub(SuperA,SuperB):
+# class SuperB:
+#     var_b=20
+#     def fun_b(self):
+#         return 21
+# class Sub(SuperA,SuperB):
+#     pass
+# obj =Sub()
+# print(obj.var_a,obj.fun_a())
+# print(obj.var_b,obj.fun_b())
+
+# class Level1:
+#     var =100
+#     def fun(self):
+#         return 101
+# class Level2:
+#     var = 200
+#     def fun(self):
+#         return 202
+# class Level3(Level2):
+#     pass
+# obj=Level3()
+# print(obj.var,obj.fun())
+
+
+class Left:
+    var ="L"
+    var_left="LL"
+    def fun(self):
+        return "Left"
+class Right:
+    var="R"
+    var_Right="RR"
+    def fun(self):
+        return "Right"
+class Sub(Left,Right):
     pass
-obj =Sub()
-print(obj.var_a,obj.fun_a())
-print(obj.var_b,obj.fun_b())
+obj=Sub()
+print(obj.var,obj.var_Right,obj.fun())
