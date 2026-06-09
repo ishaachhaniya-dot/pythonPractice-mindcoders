@@ -625,17 +625,132 @@
 # print(obj.variable_3, obj.var_3, obj.fun_3())
 
 
-class Exampleclasss:
-    def __init__(self,val=1):
-        if val%2!=0:
-            self.a=1
-        else:
-            self.b=1
-example_object=Exampleclasss(8)
-try:
-    print("a-->",example_object.a)
-except AttributeError:
-    try:
-        print("b-->",example_object.b)
-    except AttributeError:
-        print("the error has occured! silently passing it!")
+# class Exampleclasss:
+#     def __init__(self,val=1):
+#         if val%2!=0:
+#             self.a=1
+#         else:
+#             self.b=1
+# example_object=Exampleclasss(8)
+# try:
+#     print("a-->",example_object.a)
+# except AttributeError:
+#     try:
+#         print("b-->",example_object.b)
+#     except AttributeError:
+#         print("the error has occured! silently passing it!")
+
+
+
+# class Exampleclasss:
+    # a=1
+#     def __init__(self,val=1):
+#         if val%2!=0:
+#             self.a=1
+#         else:
+#             self.b=1
+# example_object=Exampleclasss(8)
+
+# if hasattr(example_object,'a'):
+#     print("a=",example_object.a)
+
+# if hasattr(example_object,'b'):
+#     print("b=",example_object.b)
+
+# print(hasattr(ExampleClass,'b'))
+# print(hasattr(exampleClass,'a'))
+
+# class python:
+#     population=1
+#     victims=0
+#     def __init__(self):
+#         self.length_ft=3
+#         self.__venomous=False
+
+# myobj=python()
+# print("myobj.population",myobj.population)
+# print("myobj.victims",myobj.victims)
+# print("myobj.length_ft",myobj.length_ft)
+# print("myobj.__venomous",myobj.__venomous)
+# print("myobj.venomous",myobj._python__venomous)
+
+# print(hasattr(version2,constructor))
+
+# class Classy:
+#     def visible(self):
+#         print("visible")
+#     def __hidden(self):
+#         print("hidden")
+# obj=Classy()
+# obj.visible()
+# try:
+#     obj.__hidden()
+# except:
+#     print("failed")
+# obj._Classy__hidden()#name mangling
+
+# class Classy:
+#     pass
+# obj=Classy()
+# print(type(obj))
+# print(type(obj).__name__)
+
+# class vehicle:
+#     pass
+# class landvehicle(vehicle):
+#     pass
+# class trackedvehicle(landvehicle):
+#     pass
+# my_vehicle=vehicle()
+# my_land_vehicle=landvehicle=()
+# my_tracked_vehicle=trackedvehicle()
+# for obj in [my_vehicle,my_land_vehicle,my_tracked_vehicle]:
+#     for cls in [vehicle,landvehicle,trackedvehicle]:
+#         print(isinstance(obj,cls),end="\t")
+#     print()
+
+# class SampleClass:
+#     def __init__(self,val):
+#         self.val=val
+# object_1=SampleClass(0)
+# object_2=SampleClass(2)
+# object_3= object_1
+# object_3.val+=1
+
+# print(object_1 is object_2)
+# print(object_2 is object_3)
+# print(object_3 is object_1)
+# print(object_1.val,object_2.val,object_3.val)
+
+# string_1="marry had a little "
+# string_2="marry had a little lamb"
+# string_1+="lamb"
+
+# print(string_1==string_2,string_1 is string_2)
+
+# class Super:
+#     def __init__(self,name):
+#         self.name=name
+#     def __str__(self):
+#         return "My name is" + self.name +"."
+    
+# class Sub(Super):
+#     def __init__(self, name):
+#         super().__init__(name)
+# obj =Sub("isha")
+# print(obj)
+
+class SuperA:
+    var_a=10
+    def fun_a(self):
+        return 11
+    
+class SuperB:
+    var_b=20
+    def fun_b(self):
+        return 21
+class Sub(SuperA,SuperB):
+    pass
+obj =Sub()
+print(obj.var_a,obj.fun_a())
+print(obj.var_b,obj.fun_b())
