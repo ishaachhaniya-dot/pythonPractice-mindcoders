@@ -111,18 +111,21 @@
 #     print(i,"missisipi")
 # print("ready or not,here i come")
 
-class ExampleClass():
-    def __init__(self,val=1):
-        self.first=val
-    def set_second(self,2):
-        self.second=val
+with open("data.txt","r") as file:
+    data=file.read()
+print(data)
 
-obj1=ExampleClass()
-obj2=ExampleClass(2)
-obj2.set_second(3)
-obj3=ExampleClass(4)
-obj3.__third=5
+with open("student.txt","w")as f:
+    f.write('ishika,21,indore\n')
+    f.write('disha,21,indore\n')
+    f.write('bhoomika,22,indore\n')
 
-print(obj1.__dict__)
-print(obj2.__dict__)
-print(obj3.__dict__)
+with open("student.txt","r")as f:
+    data=f.read()
+print(data)
+
+with open("student.txt","r")as f:
+    for line in f:
+        name,age,city=line.strip().split(',')
+        print(f'{name:<15}|{age:>5}|{city}')
+        print("________________")

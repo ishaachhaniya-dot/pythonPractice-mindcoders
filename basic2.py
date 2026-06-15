@@ -1,261 +1,266 @@
-# # numbers = [10,5,7,2,1]
-# # print(numbers)
-# # print(type(numbers))
+'''list in python'''
+# numbers = [10,5,7,2,1]
+# print(numbers)
+# print(type(numbers))
 
-# # why list starts from 0 in python 
-# # numbers[0]=> numbers address +((number of bytes occupied * index)) //answer 1st pos
-# # numbers[1]=> numbers address +((number of bytes occupied * index)) //answer 2nd pos
-# # numbers[2]=> numbers address +((number of bytes occupied * index))  // answer 3rd pos
+'''why list starts from 0 in python''' 
+# numbers[0]=> numbers address +((number of bytes occupied * index)) //answer 1st pos
+# numbers[1]=> numbers address +((number of bytes occupied * index)) //answer 2nd pos
+# numbers[2]=> numbers address +((number of bytes occupied * index))  // answer 3rd pos
 
-# # numbers =[]
-# # numbers =[2,3,4,5]
-# # print("list contents",numbers)
+# numbers =[]
+# numbers =[2,3,4,5]
+# print("list contents",numbers)
 
-# # print("first element",numbers[0])
-# # print("second element",numbers[1])
-# # print("third element",numbers[2])
+# print("first element",numbers[0])
+# print("second element",numbers[1])
+# print("third element",numbers[2])
 
-# # numbers[0] = 22
-# # print("numbers[0]",numbers[0])
-# # print(numbers)
+# numbers[0] = 22
+# print("numbers[0]",numbers[0])
+# print(numbers)
 
-# # numbers[1]=numbers[3]
-# # print(numbers)
+# numbers[1]=numbers[3]
+# print(numbers)
 
-# # print(len(numbers))
-# # del numbers[2]
-# # print(numbers)
-# # print(numbers[-1])
-# # print(numbers[-3])
-# # print(numbers[-4]) //out of range
+# print(len(numbers))
+# del numbers[2]
+# print(numbers)
+# print(numbers[-1])
+# print(numbers[-3])
+# print(numbers[-4]) //out of range
 
-# # //practice question
-# # list =[1,2,3,4,5]
-# # print(len(list))
-# # del list[4]
-# # print(len(list))
-# # i= int(input("enter the number:"))
-# # list[int(len(list)//2)]=i
-# # # print(list)
-# # list =[1,2,3,4,5]
+'''practice question'''
+# list =[1,2,3,4,5]
+# print(len(list))
+# del list[4]
+# print(len(list))
+# i= int(input("enter the number:"))
+# list[int(len(list)//2)]=i
 # # print(list)
-# # list.insert(0,3)    
-# # print(list)
+# list =[1,2,3,4,5]
+# print(list)
+# list.insert(0,3)    
+# print(list)
 
-# # my_list = [1,2,3,4,5,6,7,8,9]
-# # for count in range(len(my_list)):
-# # print
+# my_list = [1,2,3,4,5,6,7,8,9]
+# for count in range(len(my_list)):
+# print
 
-# # n=int(input("enter number:"))
-# # i=1
-# # total=0
-# # while i<=n:
-# #     total+=i
-# #     i+=1
-# # print(total)
-
-
-# # numbers=[1,2,3,4,5]
-# # numbers.append(6)
-# # print(numbers)
-
-# # rishabh
-# # my_list = [8, 10, 6, 2, 4]
-# # print(my_list) 
-# # count = 0
-# # for i in range(len(my_list)):
-# #     for j in range(i + 1, len(my_list)):
-# #         count += 1
-# #         if my_list[i] > my_list[j]:
-# #             my_list[i], my_list[j] = my_list[j], my_list[i] 
-# # print(my_list)
-# # print(count)
-
-# # sirr
-# # my_list=[1,2,3,4,5]
-# # # my_list=[8,10,6,2,4]
-# # swapped= True
-# # count=0
-# # index=0
-# # while swapped:
-# #     swapped= False 
-# #     for i in range(len(my_list)-1-index):
-# #          count+=1
-# #          if my_list[i]>my_list[i+1]:
-# #             swapped = True
-# #             my_list[i],my_list[i+1]= my_list[i+1],my_list[i]
-# # print(my_list)
-# # print(count)
+# n=int(input("enter number:"))
+# i=1
+# total=0
+# while i<=n:
+#     total+=i
+#     i+=1
+# print(total)
 
 
-# # my_list = [8, 10, 6, 2, 4] 
-# # my_list.sort() 
-# # print(my_list)
-# # my_list.reverse()
-# # print(my_list)
+# numbers=[1,2,3,4,5]
+# numbers.append(6)
+# print(numbers)
 
-# # my_list = [10, 8, 6, 4, 2] 
-# # new_list = my_list[1:3]
-# # print(new_list)
+''' rishabh'''
+# my_list = [8, 10, 6, 2, 4]
+# print(my_list) 
+# count = 0
+# for i in range(len(my_list)):
+#     for j in range(i + 1, len(my_list)):
+#         count += 1
+#         if my_list[i] > my_list[j]:
+#             my_list[i], my_list[j] = my_list[j], my_list[i] 
+# print(my_list)
+# print(count)
 
-# # my_list = [10, 8, 6, 4, 2] 
-# # new_list = my_list[1:-1]
-# # print(new_list)
+''' sirr'''
+# my_list=[1,2,3,4,5]
+# # my_list=[8,10,6,2,4]
+# swapped= True
+# count=0
+# index=0
+# while swapped:
+#     swapped= False 
+#     for i in range(len(my_list)-1-index):
+#          count+=1
+#          if my_list[i]>my_list[i+1]:
+#             swapped = True
+#             my_list[i],my_list[i+1]= my_list[i+1],my_list[i]
+# print(my_list)
+# print(count)
 
-# # my_list = [10, 8, 6, 4, 2] 
-# # new_list = my_list[-1:1] 
-# # print(new_list)
+'''sorting and reverse'''
+# my_list = [8, 10, 6, 2, 4] 
+# my_list.sort() 
+# print(my_list)
+# my_list.reverse()
+# print(my_list)
 
-# # my_list = [10, 8, 6, 4, 2] 
-# # new_list = my_list[:3] 
-# # print(new_list)
+'''slicing'''
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[1:3]
+# print(new_list)
 
-# # my_list = [10, 8, 6, 4, 2] 
-# # new_list = my_list[3:] 
-# # print(new_list)
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[1:-1]
+# print(new_list)
 
-# # my_list = [10, 8, 6, 4, 2] 
-# # del my_list[1:3] 
-# # # print(my_list)
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[-1:1] 
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[:3] 
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# new_list = my_list[3:] 
+# print(new_list)
+
+# my_list = [10, 8, 6, 4, 2] 
+# del my_list[1:3] 
+# print(my_list)
 
 
-# # # my_list = [10, 8, 6, 4, 2] 
-# # # del my_list[:] 
-# # # print(my_list)
+# my_list = [10, 8, 6, 4, 2] 
+# del my_list[:] 
+# print(my_list)
 
-# # # row=[]
-# # # for i in range(8):
-# # #     row.append("WHITE_PAWN")
-# # # print(row)
+# row=[]
+# for i in range(8):
+#     row.append("WHITE_PAWN")
+# print(row)
 
-# # # row=["WHITE_PAWN" for i in range(8)]
-# # # print(row)
+'''list comprehention'''
+# row=["WHITE_PAWN" for i in range(8)]
+# print(row)
 
-# # # squares=[ x **2 for x in range(10)]
-# # # print(squares)
+# squares=[ x **2 for x in range(10)]
+# print(squares)
 
-# # # twos=[2** index for index in range(10)]
-# # # print(twos)
+# twos=[2** index for index in range(10)]
+# print(twos)
 
-# # # squares = [index ** 2 for index in range(10)]
-# # # # odds=[index for index in squares if index %2 != 0]
-# # # # print(odds) 
+# squares = [index ** 2 for index in range(10)]
+# odds=[index for index in squares if index %2 != 0]
+# print(odds) 
 
-# # # even = [index for index in squares if index %2 ==0]
-# # # # print(even)
+# even = [index for index in squares if index %2 ==0]
+# print(even)
 
-# # # board =[]
-# # # for i in range(8):
-# # #     row =["EMPTY" for i in range(8)]
-# # #     board.append(row)
+'''two dimentional array'''
+# board =[]
+# for i in range(8):
+#     row =["EMPTY" for i in range(8)]
+#     board.append(row)
 
-# # board = []
-# # for i in range(8):
-# #      row = ["EMPTY" for i in range(8)]  
-# #      board.append(row)
+# board = []
+# for i in range(8):
+#      row = ["EMPTY" for i in range(8)]  
+#      board.append(row)
 
-# # print(board)
+# print(board)
 
      
-# # board[0][0]="ROOK"
-# # board[0][7]="ROOK"
-# # board[7][0]="ROOK"
-# # board[7][7]="ROOK"
+# board[0][0]="ROOK"
+# board[0][7]="ROOK"
+# board[7][0]="ROOK"
+# board[7][7]="ROOK"
 
-# # # print("------------")
+# print("------------")
 
-# # # for element in board:
-# # #     print(element)
+# for element in board:
+#     print(element)
 
-# # # board[0][1]="KNIGHT"
-# # # board[0][6]="KNIGHT"
-# # # board[7][1]="KNIGHT"
-# # # board[7][6]="KNIGHT"
-# # # print("------------")
-# # # for element in board:
-# # #     print(element)
+# board[0][1]="KNIGHT"
+# board[0][6]="KNIGHT"
+# board[7][1]="KNIGHT"
+# board[7][6]="KNIGHT"
+# print("------------")
+# for element in board:
+#     print(element)
 
-# # temps = [[0.0 for h in range(24)] for d in range(31)]
-# # temp1 = 19
-# # temp2 = 32
-# # count = 0
-
-
-# # for days in temps:
-# #     if count== 0:
-# #         days[11]=temp1
-# #         count = 1
-# #     else:
-# #         days[11]= temp2
-# #         count=0
-
-# # for element in temps:
-# #     print(element)
-
-# # total=0.0
-# # for days in temps:
-# #     total+=days[11]
-# # average = total/31
-# # print("Average temperature at noon:",average)
-
-# # highest = -100.0 
-# # for day in temps:
-# #      for temp in day:
-# #         if temp > highest:
-# #             highest = temp
-# # print("Highest temp:",highest)
+# temps = [[0.0 for h in range(24)] for d in range(31)]
+# temp1 = 19
+# temp2 = 32
+# count = 0
 
 
-# # hot_days=0
-# # for day in temps:
-# #     if day[11]>20.0:
-# #         hot_days +=1
-# # print(hot_days,"days were hot")
+# for days in temps:
+#     if count== 0:
+#         days[11]=temp1
+#         count = 1
+#     else:
+#         days[11]= temp2
+#         count=0
 
-# # rooms = [[[False for r in range(20)] for f in range(15)]for t in range(3)]
-# # print(rooms)
+# for element in temps:
+#     print(element)
 
-# # rooms[1][9][13] = True
-# # rooms[0][4][1]= True
+# total=0.0
+# for days in temps:
+#     total+=days[11]
+# average = total/31
+# print("Average temperature at noon:",average)
 
-# # vacancy=0
-# # for room_number in range(20):
-# #     # if not rooms[2][14][room_number]:
-# #     if not rooms[1][9][room_number]:
-
-# #         vacancy+=1
-# # print("vacancy in 3rd 15th floor",vacancy)
-
-
-# # def scope_test():
-# # x = 123
-# # scope_test()
-# # print(x)
+# highest = -100.0 
+# for day in temps:
+#      for temp in day:
+#         if temp > highest:
+#             highest = temp
+# print("Highest temp:",highest)
 
 
-# # def my_function():
-# #     print("DO i know that varible",var)
+# hot_days=0
+# for day in temps:
+#     if day[11]>20.0:
+#         hot_days +=1
+# print(hot_days,"days were hot")
 
-# # var =1
-# # my_function()
-# # print(var)
+#--------> multidimentional array
+# rooms = [[[False for r in range(20)] for f in range(15)]for t in range(3)]
+# print(rooms)
+
+# rooms[1][9][13] = True
+# rooms[0][4][1]= True
+
+# vacancy=0
+# for room_number in range(20):
+#     # if not rooms[2][14][room_number]:
+#     if not rooms[1][9][room_number]:
+
+#         vacancy+=1
+# print("vacancy in 3rd 15th floor",vacancy)
+
+#-------->scope
+# def scope_test():
+# x = 123
+# scope_test()
+# print(x)
 
 
-# # def my_function():
-# #     global var
-# #     var =2
-# #     print("DO i know that variable",var)
+# def my_function():
+#     print("DO i know that varible",var)
 
-# # var =1
-# # my_function
-# # print(var)
+# var =1
+# my_function()
+# print(var)
+
+#-------->global variable
+# def my_function():
+#     global var
+#     var =2
+#     print("DO i know that variable",var)
+
+# var =1
+# my_function
+# print(var)
 
 
-# # def my_function():
-# #     global var
-# #     var =5
-# #     return var
-# # print(return_var())
+# def my_function():
+#     global var
+#     var =5
+#     return var
+# print(return_var())
 # print(var)
 
 # def my_function(n):
@@ -266,7 +271,7 @@
 # var =1
 # my_function(var)
 # print(var)
-
+#-------->tuple
 # def my_function(my_list_1):
 #         print("Print #1:", my_list_1)
 #         print("Print #2:", my_list_2)
@@ -289,7 +294,7 @@
 # my_list_2 = [2, 3]
 # my_function(my_list_2)
 # print("Print #5:", my_list_2)
-
+#--------->recursion
 # def countdown(number):
 #     print(number)
 
@@ -361,7 +366,7 @@
 # t1,t2,t3=t2,t3,t1
 # print(t1,t2,t3)
 # print(type(t1),type(t2),type(t3))
-
+#-------->dictionary
 # dictionary={
 # "cat": "chat",
 # "dog": "chien",
@@ -436,9 +441,9 @@
 
 # pol_eng_dictionary.clear()
 # print(len(pol_eng_dictionary))
-
+ 
+ #-------->problem
 # student = {}
-
 # while True:
 #         name = input("Enter student name")
 #         if name=='':
@@ -477,7 +482,7 @@
 #         sum=0
 #         for s in score:
 #               print(name,"->",sum/len(score))
-
+#-------->object oriented programming
 # class ThisIsMyFirstClass:
 #      name="isha"
 #      age=21
@@ -769,17 +774,289 @@
 # print(obj.var,obj.fun())
 
 
-class Left:
-    var ="L"
-    var_left="LL"
-    def fun(self):
-        return "Left"
-class Right:
-    var="R"
-    var_Right="RR"
-    def fun(self):
-        return "Right"
-class Sub(Left,Right):
-    pass
-obj=Sub()
-print(obj.var,obj.var_Right,obj.fun())
+# class Left:
+#     var ="L"
+#     var_left="LL"
+#     def fun(self):
+#         return "Left"
+# class Right:
+#     var="R"
+#     var_Right="RR"
+#     def fun(self):
+#         return "Right"
+# class Sub(Left,Right):
+#     pass
+# obj=Sub()
+# print(obj.var,obj.var_Right,obj.fun())
+ 
+# class One:
+#     def do_it(self):
+#         print("do_it from One")
+#     def doanything(self):
+#         self.do_it() 
+# class Two(One):    
+#     def do_it(self):        
+#         print("do_it from Two")
+# one = One() 
+# two = Two() 
+# one.doanything()  
+# two.doanything()
+
+# def reciprocal(n):
+#     try:
+#         n=1/n
+#     except ZeroDivisionError:
+#         print("Division failed")
+#         n = None
+#     else:
+#         print("Everything went fine")
+#     finally:
+#         print("its time to say goodbye")
+#     return n 
+
+# print("_________")
+# print("reciprocal(2):",reciprocal(2))
+# print("_________")
+# print("reciprocal(0):",reciprocal(0))
+# print("_________")
+
+
+# try:
+#     i=int("Hello")
+# except Exception as e:
+#     print(e)
+#     print(e.__str__())
+
+# class MyZeroDivisionError(ZeroDivisionError):
+#     pass
+# def do_the_division(mine):
+#     if mine:
+#         raise MyZeroDivisionError("some worse news")
+#     else:
+#         raise ZeroDivisionError("some bad news")
+# do_the_division(False)
+# do_the_division(True)
+
+'''string'''
+# city='Bhopal'
+# print(city[0])
+# print(city[2])
+# print(city[-1])
+# print(city[5])
+# print(city[-3])
+# print(city[3])
+
+'''slicing in string'''
+# name='priya sharma'
+# print(name[0:5])
+# print(name[6:])
+# print(name[:5])
+# print(name[::2])
+# print(name[::-1])
+# print(len(name))
+
+'''upper and lower method'''
+# text=' hello isha '
+# print(text.upper())
+# print(text.lower())
+# print(text.title())
+# print(text.capitalize())
+# print(text.strip())
+# print('isha'in text)
+# print(text.find('isha'))
+# print(text.count('isha'))
+
+'''replacing element in string'''
+# print(text.replace('isha','yash'))
+
+
+'''split and join'''
+# info='rahul,22,bhopal,engineer'
+# parts=info.split(',')
+# print(parts)
+# rejoined='|'.join(parts)
+# print(rejoined)
+
+'''check content'''
+# print('hello123'.isalnum())
+# print('12345'.isdigit())
+# print('python'.isalpha())
+# print(' '.isspace())
+
+'''start/end check'''
+# email='student@gmail.com'
+# print(email.endswith('.com'))
+# print(email.startswith('stu'))
+
+'''Modern String Formatting Using F '''
+# name,marks,rank ='isha',86.555,3
+# print(f'hello,{name}!')
+# print(f'marks:{marks:.2f}')
+# print(f'marks:{marks:.0f}')
+# print(f'count:{1000000:,}')
+
+'''padding'''
+# print(f'{name:<15}|{marks:>8.2f}|rank:{rank}')
+
+'''expressions inside{}'''
+# price,gst=500,0.18
+# print(f'price:rs.{price}|gst:rs.{price*gst:.2f}|total:rs.{price*(1+gst):2f}')
+
+'''problem to solve'''
+# string ="hello ,how are you doing today?"
+#count vowels in string
+# count=0
+# for char in string:
+#     if char in "aeiou":
+#         count+=1
+# print(" vowels in this string:",count )
+
+#print you from the string
+# print(string.find("you"))      
+# print(string[15:18])   
+#      
+#print the string in reverse order
+# print(string[::-1])
+
+# non_palin,palin = "abcdef","axttxa"
+#check if the string is palindrome or not 
+# word="abcdef"
+# if word==word[::-1]:
+#     print("palindrome")
+# else:
+#     print("not a palindrome")
+
+# word="axttxa"
+# if word==word[::-1]:
+#     print("palindrome")
+# else:
+#     print("not a palindrome")
+
+'''opening and closing of file/data'''
+# with open("data.txt","r") as file:
+#     data=file.read()
+# print(data)
+
+'''writing of data'''
+# with open('student.txt','w') as f:
+#     f.write('isha achhaniya,85,indore\n')
+#     f.write('rishabh rai,82,indore\n')
+#     f.write('harshita raghuwanshi,88,chhindwara\n')
+
+# with open('student.txt','a')as f:
+#     f.write('sneha joshi,77,bhopal\n')
+
+# with open('student.txt','r')as f:
+#     content=f.read()
+# print(content)
+
+'''line by line (efficient for large files)'''
+# with open('student.txt','r')as f:
+#     for line in f:
+#         name,marks,city=line.strip().split(',')
+#         print(f'{name:<15}|{marks:>5}|{city}')
+#         print("-----------------------------")
+
+'''CSV file processing'''
+'''write'''
+# import csv 
+
+# records = [
+#     ['name','marks','city','grade'],
+#     ['rahul','85','jabalpur','B'],    
+#     ['priya','92','indore','A'],
+#     ['amit','73','jabalpur','B']
+# ]
+# search_name=input("enter name :")
+# found= False
+# # with open('students.csv','w',newline='') as f:
+# #     csv.writer(f).writerows(records)
+
+'''read'''
+# with open('students.csv','r',newline='') as f:
+#     for row in csv.DictReader(f):
+#     #     print(f'{row["name"]}:{row["marks"]}marks({"city"})')
+    
+#         if row["name"]==search_name:
+#             print("record of student found")
+#             print(row)
+#             found = True
+#             break 
+# if not found:
+#     print("Student not found")       
+
+'''Numpy & Pandas'''
+import numpy as np 
+# arr1d = np.array([1,2,3,4,5])
+# arr2d = np.array([[11,22,33],[22,33,44],[44,55,66]])
+# print(arr2d.shape)
+# print(arr2d.dtype)
+# print(arr2d.ndim)
+
+# zeros=np.zeros((3,4))
+# print(zeros)
+# ones=np.ones((2,5))
+# print(ones)
+# rng= np.arange(0,50,5)
+# print(rng)
+
+# lin = np.linspace(0,1,11)
+# print(lin)
+
+# random =np.random.randint(40,100,(5,3))
+# print(random)
+
+''''Array Operations'''
+# arr = np.array([10,20,30,40,50])
+# print(arr*2)
+# print(arr + 5)
+# print(arr**2)
+
+'''Statitics operations with numpy'''
+# marks_2d =np.array([[85,90,78],[72,88,95],[91,76,83]])
+# print(np.mean(marks_2d))
+# print(np.mean(marks_2d,axis=1)) #mean per student(row)
+# print(np.mean(marks_2d,axis=0)) #mean per subject(column)
+# print(np.max(marks_2d))
+# print(np.std(marks_2d))
+
+'''Printing greater numbers from list'''
+# arr = np.array([55,82,43,91,67,78])
+# print(arr[arr>70])
+
+
+import pandas as pd
+
+data = {
+    'name':['harshi','isha','bhoomika','harshika'],
+    'age':[21,21,20,20],
+    'marks':[88,84,82,79],
+    'city':['cwara','indore','betul','indore']
+}
+df =pd.DataFrame(data)
+print(df)
+print(df.shape) #(5,4) 5 rows 4 columns
+print(df.head(3)) #first 3 rows
+print(df.dtypes) #data type
+print(df.describe()) #statistical summary
+
+'''select columns'''
+print(df['name'])
+print(df[['name','marks']])
+
+'''filter rows'''
+print(df[df['marks'] >=80])
+print(df[df['city']=='indore'])
+print(df[(df['marks']>=80)&(df['city']=='indore')])
+
+def get_grade(x):
+    if x>=85:
+        return 'A'
+    elif x>=75:
+        return 'B'
+    else:
+        return 'c'
+df['grade']=df['marks'].apply(get_grade)
+print(df['grade'])
+print('-----------------------------')
+print(df)
