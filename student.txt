@@ -1,0 +1,3 @@
+ishika,21,indore
+disha,21,indore
+bhoomika,22,indore
