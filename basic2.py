@@ -1094,18 +1094,18 @@ import matplotlib .pyplot as plt
 # plt.show()
 
 '''program 2'''
-cities=['bhopal','indore','jabalpur','gwalior','ujjain']
-students=[1200,2800,980,850,650]
-colors=['#2196F3','#4CAF50','#FF9800','#9C27B0','#F44336']
-#
-plt.figure(figsize=(9,5))
-bars=plt.bar(cities,students,color=colors,edgecolor='white',linewidth=1.5)
-plt.title('student enrolled per city')
-plt.ylabel('number of students')
-for bar,val in zip(bars,students):
-    plt.text(bar.get_x()+bar.get_width()/2,val+30,str(val),ha='center',fontweight='bold')
-plt.tight_layout()
-plt.show()
+# cities=['bhopal','indore','jabalpur','gwalior','ujjain']
+# students=[1200,2800,980,850,650]
+# colors=['#2196F3','#4CAF50','#FF9800','#9C27B0','#F44336']
+# #
+# plt.figure(figsize=(9,5))
+# bars=plt.bar(cities,students,color=colors,edgecolor='white',linewidth=1.5)
+# plt.title('student enrolled per city')
+# plt.ylabel('number of students')
+# for bar,val in zip(bars,students):
+#     plt.text(bar.get_x()+bar.get_width()/2,val+30,str(val),ha='center',fontweight='bold')
+# plt.tight_layout()
+# plt.show()
 
 import numpy as np 
 '''scatter plot-relationship btw two variables'''
@@ -1118,3 +1118,25 @@ import numpy as np
 # plt.xlabel('study hours/day')
 # plt.ylabel('exam marks')
 # plt.show()
+
+'''seaborn'''
+
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+np.random.seed(42)
+#Data
+df=pd.DataFrame({
+    'marks':     np.random.randint(40,100,100),
+    'study_hours':  np.random.uniform(2,10,100),
+    'city':     np.random.choice(['bhopal','indore','jabalpur'],100),
+    'gender':   np.random.choice(['male','female'],100)})
+#histogram with kde-see the distibution
+plt.figure(figsize=(10,4))
+sns.histplot(df['marks'],bins=20,kde=True,color='steelblue')
+plt.title('distribution of student marks')
+plt.show()
+
+
+
