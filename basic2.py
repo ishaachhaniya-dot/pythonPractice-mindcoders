@@ -1080,15 +1080,41 @@ import pandas as pd
 '''MatPlotLib'''
 import matplotlib .pyplot as plt
 
-months=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
-sales = [45,52,48,61,58,72,69,70,82,90,95,98]
-#line chart-trends over time
-plt.figure(figsize=(12,5))
-plt.plot(months,sales,marker='o',color='steelblue',linewidth=2,markersize=8)
-plt.fill_between(months,sales,alpha=0.15,color='steelblue')
-plt.title('monthly sales 2024(rs.thousand)',fontsize=14,fontweight='bold')
-plt.xlabel('month')
-plt.ylabel('sales (rs.k)')
-plt.grid(True,alpha=0.3)
-plt.tight_layout()
+# months=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+# sales = [45,52,48,61,58,72,69,70,82,90,95,98]
+# #line chart-trends over time
+# plt.figure(figsize=(12,5))
+# plt.plot(months,sales,marker='o',color='steelblue',linewidth=2,markersize=8)
+# plt.fill_between(months,sales,alpha=0.15,color='steelblue')
+# plt.title('monthly sales 2024(rs.thousand)',fontsize=14,fontweight='bold')
+# plt.xlabel('month')
+# plt.ylabel('sales (rs.k)')
+# plt.grid(True,alpha=0.3)
+# plt.tight_layout()
+# plt.show()
+
+'''program 2'''
+# cities=['bhopal','indore','jabalpur','gwalior','ujjain']
+# students=[1200,2800,980,850,650]
+# colors=['#2196F3','#4CAF50','#FF9800','#9C27B0','#F44336']
+# #
+# plt.figure(figsize=(9,5))
+# bars=plt.bar(cities,students,color=colors,edgecolor='white',linewidth=1.5)
+# plt.title('student enrolled per city')
+# plt.ylabel('number of students')
+# for bar,val in zip(bars,students):
+#     plt.text(bar.get_x()+bar.get_width()/2,val+30,str(val),ha='center',fontweight='bold')
+# plt.tight_layout()
+# plt.show()
+
+import numpy as np 
+'''scatter plot-relationship btw two variables'''
+study_hrs=np.random.uniform(2,10,50)
+marks= study_hrs*7+np.random.normal(0,8,50)
+marks= np.clip(marks,30,100)
+plt.figure(figsize=(8,5))
+plt.scatter(study_hrs,marks,c=marks,cmap='RdYlGn',s=100,alpha=0.8)
+plt.title('study hoyrs vs exam marks')
+plt.xlabel('study hours/day')
+plt.ylabel('exam marks')
 plt.show()
