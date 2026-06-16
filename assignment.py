@@ -111,21 +111,35 @@
 #     print(i,"missisipi")
 # print("ready or not,here i come")
 
-with open("data.txt","r") as file:
-    data=file.read()
-print(data)
+# with open("data.txt","r") as file:
+#     data=file.read()
+# print(data)
 
-with open("student.txt","w")as f:
-    f.write('ishika,21,indore\n')
-    f.write('disha,21,indore\n')
-    f.write('bhoomika,22,indore\n')
+# with open("student.txt","w")as f:
+#     f.write('ishika,21,indore\n')
+#     f.write('disha,21,indore\n')
+#     f.write('bhoomika,22,indore\n')
 
-with open("student.txt","r")as f:
-    data=f.read()
-print(data)
+# with open("student.txt","r")as f:
+#     data=f.read()
+# print(data)
 
-with open("student.txt","r")as f:
-    for line in f:
-        name,age,city=line.strip().split(',')
-        print(f'{name:<15}|{age:>5}|{city}')
-        print("________________")
+# with open("student.txt","r")as f:
+#     for line in f:
+#         name,age,city=line.strip().split(',')
+#         print(f'{name:<15}|{age:>5}|{city}')
+#         print("________________")
+
+
+
+import pandas as pd
+
+data = {
+    'name':['harshi','isha','bhoomika','harshika'],
+    'age':[21,21,20,20],
+    'marks':[88,84,82,79],
+    'city':['cwara','indore','betul','indore']
+}
+df=pd.DataFrame(data)
+print(df)
+print(df.describe())

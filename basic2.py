@@ -959,7 +959,7 @@
 
 '''CSV file processing'''
 '''write'''
-# import csv 
+import csv 
 
 # records = [
 #     ['name','marks','city','grade'],
@@ -1027,36 +1027,68 @@ import numpy as np
 
 import pandas as pd
 
-data = {
-    'name':['harshi','isha','bhoomika','harshika'],
-    'age':[21,21,20,20],
-    'marks':[88,84,82,79],
-    'city':['cwara','indore','betul','indore']
-}
-df =pd.DataFrame(data)
-print(df)
-print(df.shape) #(5,4) 5 rows 4 columns
-print(df.head(3)) #first 3 rows
-print(df.dtypes) #data type
-print(df.describe()) #statistical summary
+# data = {
+#     'name':['harshi','isha','bhoomika','harshika'],
+#     'age':[21,21,20,20],
+#     'marks':[88,84,82,79],
+#     'city':['cwara','indore','betul','indore']
+# }
+# df =pd.DataFrame(data)
+# print(df)
+# print(df.shape) #(5,4) 5 rows 4 columns
+# print(df.head(3)) #first 3 rows
+# print(df.dtypes) #data type
+# print(df.describe()) #statistical summary
 
-'''select columns'''
-print(df['name'])
-print(df[['name','marks']])
+# '''select columns'''
+# print(df['name'])
+# print(df[['name','marks']])
 
-'''filter rows'''
-print(df[df['marks'] >=80])
-print(df[df['city']=='indore'])
-print(df[(df['marks']>=80)&(df['city']=='indore')])
+# '''filter rows'''
+# print(df[df['marks'] >=80])
+# print(df[df['city']=='indore'])
+# print(df[(df['marks']>=80)&(df['city']=='indore')])
 
-def get_grade(x):
-    if x>=85:
-        return 'A'
-    elif x>=75:
-        return 'B'
-    else:
-        return 'c'
-df['grade']=df['marks'].apply(get_grade)
-print(df['grade'])
-print('-----------------------------')
-print(df)
+# def get_grade(x):
+#     if x>=85:
+#         return 'A'
+#     elif x>=75:
+#         return 'B'
+#     else:
+#         return 'c'
+# df['grade']=df['marks'].apply(get_grade)
+# print(df['grade'])
+# print('-----------------------------')
+# print(df)
+
+'''Groupby '''
+# city_avg =df.groupby('city')['marks'].mean()
+# print(city_avg)
+
+'''read real csv'''
+
+'''cleaning of data'''
+# df2 = pd.read_csv('students.csv')
+# df2 ['name'] = df2 ['name'].str.strip()
+# print(df2)
+# df2['marks'] = df2 ['marks'].str.replace ('#',' ')
+# print(df2)
+# df2['city'] = df2 ['city'].str.replace ('*',' ')
+# print(df2)
+# df2.to_csv('clean output.csv', index = False)
+
+'''MatPlotLib'''
+import matplotlib .pyplot as plt
+
+months=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+sales = [45,52,48,61,58,72,69,70,82,90,95,98]
+#line chart-trends over time
+plt.figure(figsize=(12,5))
+plt.plot(months,sales,marker='o',color='steelblue',linewidth=2,markersize=8)
+plt.fill_between(months,sales,alpha=0.15,color='steelblue')
+plt.title('monthly sales 2024(rs.thousand)',fontsize=14,fontweight='bold')
+plt.xlabel('month')
+plt.ylabel('sales (rs.k)')
+plt.grid(True,alpha=0.3)
+plt.tight_layout()
+plt.show()
