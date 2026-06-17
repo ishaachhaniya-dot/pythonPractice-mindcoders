@@ -23,5 +23,11 @@ rng=max(salaries)-min(salaries)
 q1=np.percentile(salaries,25)
 q3=np.percentile(salaries,75)
 iqr= q3-q1
-print(f'std daviation:{std:.2f}K  (most important spread measure)')
-print(f'IQR:{iqr}K   (Q1={q1}, Q3={q3})')
+print(f'std daviation : {std:.2f}K  (most important spread measure)')
+print(f'IQR :  {iqr}K   (Q1={q1}, Q3={q3})')
+
+'''outler detection using IQR(interquartile range)'''
+lower=q1-1.5*iqr
+upper=q3+1.5*iqr
+outliers=[x for x in salaries if x< lower or x> upper]
+print(f'outliers:{outliers}')
