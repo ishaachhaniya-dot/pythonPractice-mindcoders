@@ -142,4 +142,20 @@ data = {
 }
 df=pd.DataFrame(data)
 print(df)
+print(df.shape)
+print(df.head(3))
+print(df.dtypes)
 print(df.describe())
+print(df[['name','age']])
+print(df[(df['city']=='indore')&(df['marks']>20)])
+
+def get_grade(x):
+    if x>85:
+        return 'A'
+    elif x>75:
+        return 'B'
+    else:
+        return 'C'
+df['grade']=df['marks'].apply(get_grade)
+print(df['grade'])
+print(df)
