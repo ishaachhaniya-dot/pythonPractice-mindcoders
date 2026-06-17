@@ -1150,6 +1150,8 @@ df=pd.DataFrame({
 # plt.title('correlation matrix')
 # plt.show()
 
-'''pair plot'''
-sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
-plt.show()
+'''pair plot- all relations at once'''
+# sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
+# plt.show()
+
+
