@@ -31,3 +31,4 @@ lower=q1-1.5*iqr
 upper=q3+1.5*iqr
 outliers=[x for x in salaries if x< lower or x> upper]
 print(f'outliers:{outliers}')
+
