@@ -1065,7 +1065,7 @@ import pandas as pd
 # city_avg =df.groupby('city')['marks'].mean()
 # print(city_avg)
 
-'''read real csv'''
+'''read real csv''' 
 
 '''cleaning of data'''
 # df2 = pd.read_csv('students.csv')
@@ -1132,11 +1132,24 @@ df=pd.DataFrame({
     'study_hours':  np.random.uniform(2,10,100),
     'city':     np.random.choice(['bhopal','indore','jabalpur'],100),
     'gender':   np.random.choice(['male','female'],100)})
-#histogram with kde-see the distibution
-plt.figure(figsize=(10,4))
-sns.histplot(df['marks'],bins=20,kde=True,color='steelblue')
-plt.title('distribution of student marks')
+
+'''histogram with kde-see the distibution'''
+# plt.figure(figsize=(10,4))
+# sns.histplot(df['marks'],bins=20,kde=True,color='steelblue')
+# plt.title('distribution of student marks')
+# plt.show()
+
+'''sns.boxplot-outliners and spread per group'''
+# sns.boxplot(data=df,x='city',y='marks',palette='Set3')
+# plt.title('marks Distribution by city')
+# plt.show()
+
+'''heatmap(corelation)'''
+# plt.figure(figsize=(5,4))
+# sns.heatmap(df[['marks','study_hours']].corr(),annot=True,cmap='coolwarm',vmin=-1,vmax=1)
+# plt.title('correlation matrix')
+# plt.show()
+
+'''pair plot'''
+sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
 plt.show()
-
-
-
