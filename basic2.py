@@ -1151,7 +1151,7 @@ np.random.seed(42)
 # plt.show()
 
 '''pair plot- all relations at once'''
-sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
-plt.show()
+# sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
+# plt.show()
 
 
