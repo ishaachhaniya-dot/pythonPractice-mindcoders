@@ -1,3 +1,4 @@
+
 # x = input("Enter the plant name: ")
 
 # if x == "Spathiphyllum":
@@ -134,28 +135,17 @@
 
 import pandas as pd
 
-data = {
-    'name':['harshi','isha','bhoomika','harshika'],
-    'age':[21,21,20,20],
-    'marks':[88,84,82,79],
-    'city':['cwara','indore','betul','indore']
-}
-df=pd.DataFrame(data)
-print(df)
-print(df.shape)
-print(df.head(3))
-print(df.dtypes)
-print(df.describe())
-print(df[['name','age']])
-print(df[(df['city']=='indore')&(df['marks']>20)])
+df2 = pd.read_csv('students.csv')
+df2 ['name'] = df2 ['name'].str.strip()
+print(df2)
+df2['marks'] = df2 ['marks'].str.replace ('#',' ')
+print(df2)
+df2['city'] = df2 ['city'].str.replace ('*',' ')
+print(df2)
+df2.to_csv('clean output.csv', index = False)
 
-def get_grade(x):
-    if x>85:
-        return 'A'
-    elif x>75:
-        return 'B'
-    else:
-        return 'C'
-df['grade']=df['marks'].apply(get_grade)
-print(df['grade'])
-print(df)
+df2=pd.read_csv('student.csv')
+df2['name']=df2['name'].str.strip()
+df2['marks']=df2['marks'].str.replace('#',' ')
+df2['city']=df2['city'].str.replace('#',' ')
+print(df2)
