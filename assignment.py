@@ -133,19 +133,3 @@
 
 
 
-import pandas as pd
-
-df2 = pd.read_csv('students.csv')
-df2 ['name'] = df2 ['name'].str.strip()
-print(df2)
-df2['marks'] = df2 ['marks'].str.replace ('#',' ')
-print(df2)
-df2['city'] = df2 ['city'].str.replace ('*',' ')
-print(df2)
-df2.to_csv('clean output.csv', index = False)
-
-df2=pd.read_csv('student.csv')
-df2['name']=df2['name'].str.strip()
-df2['marks']=df2['marks'].str.replace('#',' ')
-df2['city']=df2['city'].str.replace('#',' ')
-print(df2)
