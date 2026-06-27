@@ -73,26 +73,26 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #data
-np.random.seed(42)
-study=np.random.uniform(2,10,60)
-marks=study*8+np.random.normal(0,10,60)
-marks=np.clip(marks,30,100)
-absent=10-study+np.random.normal(0,1,60)
+# np.random.seed(42)
+# study=np.random.uniform(2,10,60)
+# marks=study*8+np.random.normal(0,10,60)
+# marks=np.clip(marks,30,100)
+# absent=10-study+np.random.normal(0,1,60)
 
-df=pd.Dataframe({'study_hours':study,'marks':marks,'absenses':absent})
-corr_matrix=df.corr()
-print(corr_matrix.round(3))
+# df=pd.Dataframe({'study_hours':study,'marks':marks,'absenses':absent})
+# corr_matrix=df.corr()
+# print(corr_matrix.round(3))
 
-plt.figure(figsize=(6,4))
-sns.heatmap(corr_matrix,annot=True,cmap='coolwarm',vmin=-1,vmax=1,fmt='.2f')
-plt.title('correlation matrix')
-plt.show()
+# plt.figure(figsize=(6,4))
+# sns.heatmap(corr_matrix,annot=True,cmap='coolwarm',vmin=-1,vmax=1,fmt='.2f')
+# plt.title('correlation matrix')
+# plt.show()
 
 #pearson correlation
-r,p_value=stats.pearson(study,marks)
-print(f'study-marks correlation :r={r:.3f},p={p_value:.4f}')
+# r,p_value=stats.pearson(study,marks)
+# print(f'study-marks correlation :r={r:.3f},p={p_value:.4f}')
 
-print('interpretation:','strong positive'if r>0.7 else 'moderate' if r>0.4 else 'weak')
+# print('interpretation:','strong positive'if r>0.7 else 'moderate' if r>0.4 else 'weak')
 
 
 import numpy as np
