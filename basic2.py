@@ -1127,11 +1127,19 @@ import numpy as np
 
 np.random.seed(42)
 #Data
+<<<<<<< HEAD
 df=pd.DataFrame({
     'marks':     np.random.randint(40,100,100),
     'study_hours':  np.random.uniform(2,10,100),
     'city':     np.random.choice(['bhopal','indore','jabalpur'],100),
     'gender':   np.random.choice(['male','female'],100)})
+=======
+# df=pd.DataFrame({
+#     'marks':     np.random.randint(40,100,100),
+#     'study_hours':  np.random.uniform(2,10,100),
+#     'city':     np.random.choice(['bhopal','indore','jabalpur'],100),
+#     'gender':   np.random.choice(['male','female'],100)})
+>>>>>>> 5be27bc228e9305f5fa217dba8d8480c28147208
 
 '''histogram with kde-see the distibution'''
 # plt.figure(figsize=(10,4))
