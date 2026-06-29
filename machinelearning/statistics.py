@@ -6,32 +6,32 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 '''employee salaries(in thousand)'''
-salaries=[22,28,35,42,38,55,48,60,72,85,30,45,52,65,28,34,41,58,75,90]
+# salaries=[22,28,35,42,38,55,48,60,72,85,30,45,52,65,28,34,41,58,75,90]
 
 '''central tendency-where is the 'centre' of data'''
-mean =np.mean(salaries) #average
-median=np.median(salaries) #middle value when sorted
-mode=stats.mode(salaries,keepdims=True).mode[0] #most frequent
+# mean =np.mean(salaries) #average
+# median=np.median(salaries) #middle value when sorted
+# mode=stats.mode(salaries,keepdims=True).mode[0] #most frequent
 
-print(f'mean (average):Rs.{mean:.1f}k')
-print(f'median  (middle value):Rs.{median}k')
-print(f'mode  (most common): Rs.{mode}k')
+# print(f'mean (average):Rs.{mean:.1f}k')
+# print(f'median  (middle value):Rs.{median}k')
+# print(f'mode  (most common): Rs.{mode}k')
 
 '''spread--how varied is data'''
-std=np.std(salaries)
-var=np.var(salaries)
-rng=max(salaries)-min(salaries)
-q1=np.percentile(salaries,25)
-q3=np.percentile(salaries,75)
-iqr= q3-q1
-print(f'std daviation : {std:.2f}K  (most important spread measure)')
-print(f'IQR :  {iqr}K   (Q1={q1}, Q3={q3})')
+# std=np.std(salaries)
+# var=np.var(salaries)
+# rng=max(salaries)-min(salaries)
+# q1=np.percentile(salaries,25)
+# q3=np.percentile(salaries,75)
+# iqr= q3-q1
+# print(f'std daviation : {std:.2f}K  (most important spread measure)')
+# print(f'IQR :  {iqr}K   (Q1={q1}, Q3={q3})')
 
 '''outler detection using IQR(interquartile range)'''
-lower=q1-1.5*iqr
-upper=q3+1.5*iqr
-outliers=[x for x in salaries if x< lower or x> upper]
-print(f'outliers:{outliers}')
+# lower=q1-1.5*iqr
+# upper=q3+1.5*iqr
+# outliers=[x for x in salaries if x< lower or x> upper]
+# print(f'outliers:{outliers}')
 
 # import numpy as np
 # import pandas as pd
@@ -67,32 +67,27 @@ print(f'outliers:{outliers}')
 # print(f'outliers:{outliers}')
 
 '''correlation'''
-# import numpy as np
-# import seaborn as sns
-# import pandas as pd
-# import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
 
 #data
-# np.random.seed(42)
-# study=np.random.uniform(2,10,60)
-# marks=study*8+np.random.normal(0,10,60)
-# marks=np.clip(marks,30,100)
-# absent=10-study+np.random.normal(0,1,60)
+np.random.seed(42)
+study=np.random.uniform(2,10,60)
+marks=study*8+np.random.normal(0,10,60)
+marks=np.clip(marks,30,100)
+absent=10-study+np.random.normal(0,1,60)
 
-# df=pd.Dataframe({'study_hours':study,'marks':marks,'absenses':absent})
-# corr_matrix=df.corr()
-# print(corr_matrix.round(3))
+df=pd.DataFrame({'study_hours':study,'marks':marks,'absenses':absent})
+corr_matrix=df.corr()
+print(corr_matrix.round(3))
 
-# plt.figure(figsize=(6,4))
-# sns.heatmap(corr_matrix,annot=True,cmap='coolwarm',vmin=-1,vmax=1,fmt='.2f')
-# plt.title('correlation matrix')
-# plt.show()
+plt.figure(figsize=(6,4))
+sns.heatmap(corr_matrix,annot=True,cmap='coolwarm',vmin=-1,vmax=1,fmt='.2f')
+plt.title('correlation matrix')
+plt.show()
 
-#pearson correlation
-# r,p_value=stats.pearson(study,marks)
-# print(f'study-marks correlation :r={r:.3f},p={p_value:.4f}')
-
-# print('interpretation:','strong positive'if r>0.7 else 'moderate' if r>0.4 else 'weak')
 
 
 # import numpy as np
