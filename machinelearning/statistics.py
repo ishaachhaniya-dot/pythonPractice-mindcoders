@@ -6,32 +6,32 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 '''employee salaries(in thousand)'''
-# salaries=[22,28,35,42,38,55,48,60,72,85,30,45,52,65,28,34,41,58,75,90]
+salaries=[22,28,35,42,38,55,48,60,72,85,30,45,52,65,28,34,41,58,75,90]
 
-# '''central tendency-where is the 'centre' of data'''
-# mean =np.mean(salaries) #average
-# median=np.median(salaries) #middle value when sorted
-# mode=stats.mode(salaries,keepdims=True).mode[0] #most frequent
+'''central tendency-where is the 'centre' of data'''
+mean =np.mean(salaries) #average
+median=np.median(salaries) #middle value when sorted
+mode=stats.mode(salaries,keepdims=True).mode[0] #most frequent
 
-# print(f'mean (average):Rs.{mean:.1f}k')
-# print(f'median  (middle value):Rs.{median}k')
-# print(f'mode  (most common): Rs.{mode}k')
+print(f'mean (average):Rs.{mean:.1f}k')
+print(f'median  (middle value):Rs.{median}k')
+print(f'mode  (most common): Rs.{mode}k')
 
 '''spread--how varied is data'''
-# std=np.std(salaries)
-# var=np.var(salaries)
-# rng=max(salaries)-min(salaries)
-# q1=np.percentile(salaries,25)
-# q3=np.percentile(salaries,75)
-# iqr= q3-q1
-# print(f'std daviation : {std:.2f}K  (most important spread measure)')
-# print(f'IQR :  {iqr}K   (Q1={q1}, Q3={q3})')
+std=np.std(salaries)
+var=np.var(salaries)
+rng=max(salaries)-min(salaries)
+q1=np.percentile(salaries,25)
+q3=np.percentile(salaries,75)
+iqr= q3-q1
+print(f'std daviation : {std:.2f}K  (most important spread measure)')
+print(f'IQR :  {iqr}K   (Q1={q1}, Q3={q3})')
 
 '''outler detection using IQR(interquartile range)'''
-# lower=q1-1.5*iqr
-# upper=q3+1.5*iqr
-# outliers=[x for x in salaries if x< lower or x> upper]
-# print(f'outliers:{outliers}')
+lower=q1-1.5*iqr
+upper=q3+1.5*iqr
+outliers=[x for x in salaries if x< lower or x> upper]
+print(f'outliers:{outliers}')
 
 # import numpy as np
 # import pandas as pd
@@ -67,10 +67,10 @@ from scipy import stats
 # print(f'outliers:{outliers}')
 
 '''correlation'''
-import numpy as np
-import seaborn as sns
-import pandas as pd
-import matplotlib.pyplot as plt
+# import numpy as np
+# import seaborn as sns
+# import pandas as pd
+# import matplotlib.pyplot as plt
 
 #data
 # np.random.seed(42)
@@ -95,9 +95,9 @@ import matplotlib.pyplot as plt
 # print('interpretation:','strong positive'if r>0.7 else 'moderate' if r>0.4 else 'weak')
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.stats import norm #normal distribution claculator
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from scipy.stats import norm #normal distribution claculator
 
 '''mean_h, std_h = 165, 7'''
 
@@ -110,9 +110,9 @@ from scipy.stats import norm #normal distribution claculator
 # print(f'95% of people: {mean_h-2*std_h: 0f}cm to {+2*std_h: .0f}cm')
 # print(f'99.7% of people: {mean_h-3*std_h:.0f}cm to {mean_h+3*std_h: .0f}')
 
-from sklearn.model_selection import train_test_split, cross_val_score
+# from sklearn.model_selection import train_test_split, cross_val_score
 
-np.random.seed(42)
+# np.random.seed(42)
 # x = np.random.randn(500, 5)
 # y = np.random.randint(0, 2, 500)
 
