@@ -281,7 +281,6 @@ plt.xlabel("Month")
 plt.ylabel("Sales")
 plt.legend()
 plt.grid(True)
-
 plt.show()
 
 
