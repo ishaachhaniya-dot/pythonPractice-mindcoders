@@ -131,39 +131,58 @@
 
 '''project 2'''
 
-items={
-    'single size bedsheet':160,
-    'double size bedsheet':250,
-    'pillow covers':50,
-    'comforter':240,
-    '3*4 bedsheet':200
-}
-print("welcome to YASH HANDLOOMS")
-print("here's our menu:")
-print("single size bedsheet:160 rs\ndouble size bedsheet:250 rs\npillow covers:50 rs\ncomforter:240 rs\n3*4 bedsheet:200 rs")
+# items={
+#     'single size bedsheet':160,
+#     'double size bedsheet':250,
+#     'pillow covers':50,
+#     'comforter':240,
+#     '3*4 bedsheet':200
+# }
+# print("welcome to YASH HANDLOOMS")
+# print("here's our menu:")
+# print("single size bedsheet:160 rs\ndouble size bedsheet:250 rs\npillow covers:50 rs\ncomforter:240 rs\n3*4 bedsheet:200 rs")
 
-total_order=0
+# total_order=0
 
-item_1=input("Enter the name of item you want to order=")
-if item_1 in items:
-    total_order+=items[item_1]
-    print(f'{item_1} added to bill')
-else:
-    print(f'orderd item {item_1} not available yet!')
-another_order=input("do you want to add another item?(yes/no)")
-if another_order=="yes":
-    item_2=input("enter second item=")
-    if item_2 in items:
-        total_order+=items[item_2]
-        print(f'{item_2} has been added')
-    else:
-        print(f'orderd item {item_2} not available yet!')
-more_to_add=input("do you want to add third item?(yes/no)")
-if more_to_add=="yes":
-    item_3=input("enter third item=")
-    if item_3 in items:
-        total_order+=items[item_3]
-        print(f'{item_3}added')
-    else:
-        print(f'{item_3}not available yet!')
-print(f'The total amount of items to pay --> {total_order}')
+# item_1=input("Enter the name of item you want to order=")
+# if item_1 in items:
+#     total_order+=items[item_1]
+#     print(f'{item_1} added to bill')
+# else:
+#     print(f'orderd item {item_1} not available yet!')
+# another_order=input("do you want to add another item?(yes/no)")
+# if another_order=="yes":
+#     item_2=input("enter second item=")
+#     if item_2 in items:
+#         total_order+=items[item_2]
+#         print(f'{item_2} has been added')
+#     else:
+#         print(f'orderd item {item_2} not available yet!')
+# more_to_add=input("do you want to add third item?(yes/no)")
+# if more_to_add=="yes":
+#     item_3=input("enter third item=")
+#     if item_3 in items:
+#         total_order+=items[item_3]
+#         print(f'{item_3}added')
+#     else:
+#         print(f'{item_3}not available yet!')
+# print(f'The total amount of items to pay --> {total_order}')
+
+
+'''project 3'''
+height=float(input("Enter your height in cm:"))
+weight=float(input("Enter weight in kg:"))
+height=height/100
+BMI=weight/(height*height)
+print("your body mass index is:")
+if(BMI>0):
+	if(BMI<=16):
+		print("you are critically underweight")
+	elif(BMI<=18):
+		print("underweight")
+	elif(BMI<=25):
+		print("you are Healthy")
+	elif(BMI<=30):
+		print("you are overweight")
+	else: print("you are critically overweight")
+else:("enter valid details")

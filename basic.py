@@ -335,7 +335,7 @@
 rows = 5  # Number of rows in the triangle
 
 # Outer loop: controls the number of rows
-for i in range(1, rows + 1):
-    for j in range(1, i + 1):  # Inner loop: controls the number of stars in each row
-        print("*", end=" ")  # Print a star and a space (no newline)
-    print()  # Move to the next line after each row is printed
+# for i in range(1, rows + 1):
+#     for j in range(1, i + 1):  
+#         print("*", end=" ")  # Print a star and a space (no newline)
+#     print()  # Move to the next line after each row is printed

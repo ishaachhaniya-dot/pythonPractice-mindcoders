@@ -989,9 +989,14 @@ import csv
 import numpy as np 
 # arr1d = np.array([1,2,3,4,5])
 # arr2d = np.array([[11,22,33],[22,33,44],[44,55,66]])
+# arr3d = np.array([[[1,2,3],[2,3,4],[3,4,5]]])
+# print(arr1d)
 # print(arr2d.shape)
 # print(arr2d.dtype)
-# print(arr2d.ndim)
+# # print(arr2d.ndim)
+
+# arr = np.empty((4, 3), dtype=np.int32)
+# print(arr)
 
 # zeros=np.zeros((3,4))
 # print(zeros)
@@ -1003,8 +1008,36 @@ import numpy as np
 # lin = np.linspace(0,1,11)
 # print(lin)
 
+# arr = np.full((2, 2), 7)
+# print(arr)
 # random =np.random.randint(40,100,(5,3))
 # print(random)
+# identity_matrix = np.eye(3)
+# diagonal= np.diag([1, 2, 3])
+
+'''accessing elem in 1d array'''
+# arr = np.array([10, 20, 30, 40, 50])
+# print(arr[0])
+
+'''accesing elem in multi array'''
+# arr=np.array([[2,3,4],[3,4,5],[4,5,6]])
+# print(arr[1,2])
+
+'''reshapping'''
+import numpy as np
+a = np.array([1, 2, 3, 4, 5, 6])
+r = a.reshape(2, 3)
+print(r)
+
+'''stacking'''
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# print(np.stack((a, b), axis=0))
+print(np.stack((a, b), axis=1))
+# print(np.stack((a, b), axis=-1))
 
 ''''Array Operations'''
 # arr = np.array([10,20,30,40,50])
@@ -1023,6 +1056,16 @@ import numpy as np
 '''Printing greater numbers from list'''
 # arr = np.array([55,82,43,91,67,78])
 # print(arr[arr>70])
+
+'''(.tolist())=checking array in list'''
+# arr=np.array(
+#     [
+#         [1,2,3],[1,3,4],[4,5,3]
+#         ]
+#         )
+# print(arr)
+# print([1,2,3]in arr.tolist())
+# print([2,3,4]in arr.tolist())
 
 
 import pandas as pd
@@ -1123,7 +1166,7 @@ import numpy as np
 
 import seaborn as sns
 import pandas as pd
-import numpy as np
+import numpy_practice as np
 
 np.random.seed(42)
 #Data

@@ -286,7 +286,7 @@ histogram, box plot, correlation heatmap, monthly trend line chart'''
 '''Print the first 100 natural numbers using a for loop'''
 # for num in range(1,101):
 #     print(num)
-
+ 
 
 for num in range(2,11,2):
     print(num)
