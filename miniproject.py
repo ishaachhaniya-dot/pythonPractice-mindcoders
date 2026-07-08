@@ -170,19 +170,33 @@
 
 
 '''project 3'''
-height=float(input("Enter your height in cm:"))
-weight=float(input("Enter weight in kg:"))
-height=height/100
-BMI=weight/(height*height)
-print("your body mass index is:")
-if(BMI>0):
-	if(BMI<=16):
-		print("you are critically underweight")
-	elif(BMI<=18):
-		print("underweight")
-	elif(BMI<=25):
-		print("you are Healthy")
-	elif(BMI<=30):
-		print("you are overweight")
-	else: print("you are critically overweight")
-else:("enter valid details")
+
+# height=float(input("Enter your height in cm:"))
+# weight=float(input("Enter weight in kg:"))
+# height=height/100
+# BMI=weight/(height*height)
+# print("your body mass index is:")
+# if(BMI>0):
+# 	if(BMI<=16):
+# 		print("you are critically underweight")
+# 	elif(BMI<=18):
+# 		print("underweight")
+# 	elif(BMI<=25):
+# 		print("you are Healthy")
+# 	elif(BMI<=30):
+# 		print("you are overweight")
+# 	else: print("you are critically overweight")
+# else:("enter valid details")
+
+'''project 4'''
+
+import random
+cards = ["Diamonds", "Spades", "Hearts", "Clubs"]
+ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
+
+def picking_card():
+    card = random.choices(cards)
+    rank = random.choices(ranks)
+    return(f"The {rank} of {card}")
+
+print(picking_card())
