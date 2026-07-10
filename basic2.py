@@ -986,7 +986,7 @@ import csv
 #     print("Student not found")       
 
 '''Numpy & Pandas'''
-import numpy as np 
+# import numpy as np 
 # arr1d = np.array([1,2,3,4,5])
 # arr2d = np.array([[11,22,33],[22,33,44],[44,55,66]])
 # arr3d = np.array([[[1,2,3],[2,3,4],[3,4,5]]])
@@ -1024,26 +1024,59 @@ import numpy as np
 # print(arr[1,2])
 
 '''reshapping'''
-import numpy as np
-a = np.array([1, 2, 3, 4, 5, 6])
-r = a.reshape(2, 3)
-print(r)
+# a = np.array([1, 2, 3, 4, 5, 6])
+# r = a.reshape(2, 3)
+# print(r)
 
 '''stacking'''
-import numpy as np
-
-a = np.array([1, 2, 3])
-b = np.array([4, 5, 6])
+# a = np.array([1, 2, 3])
+# b = np.array([4, 5, 6])
 
 # print(np.stack((a, b), axis=0))
-print(np.stack((a, b), axis=1))
-# print(np.stack((a, b), axis=-1))
+# print(np.stack((a, b), axis=1))
 
-''''Array Operations'''
+'''spiliting'''
+# arr = np.arange(6)
+# res = np.split(arr, 2)
+# print(res)
+
+'''common values (intersection) between two arrays'''
+# A = np.array([1, 2, 3, 4, 5])
+# B = np.array([3, 4, 5, 6, 7])
+# common = np.intersect1d(A, B)
+# print(common)
+
+'''Broadcasting--allows us to perform arithmetic operations on arrays of different shapes without reshaping them. '''
 # arr = np.array([10,20,30,40,50])
 # print(arr*2)
 # print(arr + 5)
 # print(arr**2)
+
+'''arithmetic operations'''
+# a = np.array([5, 72, 13, 100])
+# b = np.array([2, 5, 10, 30])
+# res = np.add(a, b)
+# print(res)
+
+# a = np.array([5, 72, 13, 100])
+# b = np.array([2, 5, 10, 30])
+# res = np.subtract(a, b)
+# print(res)
+
+# a = np.array([5, 72, 13, 100])
+# b = np.array([2, 5, 10, 30])
+# res = np.multiply(a, b)
+# print(res)
+
+# a = np.array([5, 72, 13, 100])
+# b = np.array([2, 5, 10, 30])
+# res = np.divide(a, b)
+# print(res)
+
+# a = np.array([5, 72, 13, 100])
+# b = np.array([2, 5, 10, 30])
+# res = np.mod(a, b)
+# print(res)
 
 '''Statitics operations with numpy'''
 # marks_2d =np.array([[85,90,78],[72,88,95],[91,76,83]])
@@ -1051,7 +1084,17 @@ print(np.stack((a, b), axis=1))
 # print(np.mean(marks_2d,axis=1)) #mean per student(row)
 # print(np.mean(marks_2d,axis=0)) #mean per subject(column)
 # print(np.max(marks_2d))
+# print(np.min(marks_2d))
 # print(np.std(marks_2d))
+# print(np.average(marks_2d))
+
+'''matrix opr'''
+
+# a = [[1, 2], [2, 3]]
+# b = [[4, 5], [6, 7]]
+
+# c = np.dot(a, b)
+# print(c)
 
 '''Printing greater numbers from list'''
 # arr = np.array([55,82,43,91,67,78])
@@ -1083,11 +1126,23 @@ import pandas as pd
 # print(df.dtypes) #data type
 # print(df.describe()) #statistical summary
 
-# '''select columns'''
+'''select columns'''
 # print(df['name'])
 # print(df[['name','marks']])
 
-# '''filter rows'''
+'''remove all rows containing NULL values from the original DataFrame.'''
+# df = pd.read_csv('data.csv')
+# df.dropna(inplace = True)
+# print(df.to_string())
+
+'''fill value in any empty space'''
+# df = pd.read_csv('data.csv')
+# df.fillna(130, inplace = True)
+ 
+'''remove duplicates'''
+# df.drop_duplicates(inplace = True)
+
+'''filter rows'''
 # print(df[df['marks'] >=80])
 # print(df[df['city']=='indore'])
 # print(df[(df['marks']>=80)&(df['city']=='indore')])
@@ -1162,13 +1217,22 @@ import numpy as np
 # plt.ylabel('exam marks')
 # plt.show()
 
+import matplotlib.pyplot as plt
+
+marks = ['isha', 'harshi', 'khushi','anshi', 'bhoomika',]
+data = [23, 10, 35, 15, 12]
+
+plt.pie(data, labels=marks, autopct='%1.1f%%')
+plt.title(" Pie Chart of group of friends marks")
+plt.show()
+
 '''seaborn'''
 
 import seaborn as sns
 import pandas as pd
-import numpy_practice as np
+import numpy as np
 
-np.random.seed(42)
+# np.random.seed(42)
 #Data
 # df=pd.DataFrame({
 #     'marks':     np.random.randint(40,100,100),
@@ -1196,5 +1260,4 @@ np.random.seed(42)
 '''pair plot- all relations at once'''
 # sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
 # plt.show()
-
 

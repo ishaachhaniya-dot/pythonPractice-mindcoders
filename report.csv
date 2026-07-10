@@ -1,4 +1,8 @@
-Summary,Value
-Class Average,65.33333333333334
-Topper,Kavita
-Failure Rate,28.000000000000004%
+Patient_ID,Name,Age,Gender,Disease,Department,Admission_Date,Discharge_Date,Bill,Stay_Days
+1,Rahul,25,Male,Fever,General,2026-01-01,2026-01-04,5000,3
+2,Priya,40,Female,Diabetes,Medicine,2026-01-03,2026-01-08,15000,5
+3,Amit,60,Male,Heart Disease,Cardiology,2026-01-05,2026-01-12,65000,7
+4,Neha,30,Female,Asthma,Pulmonology,2026-01-08,2026-01-11,12000,3
+5,Rohan,18,Male,Dengue,General,2026-01-10,2026-01-15,18000,5
+
+25,40,60,30,18

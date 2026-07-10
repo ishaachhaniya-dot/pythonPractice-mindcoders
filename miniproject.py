@@ -17,7 +17,7 @@
 # #check missing values
 # print(df.isnull().sum())
 # #fill missing values
-# print(df.fillna(0, inplace=True))
+# df.fillna(0, inplace=True)
 
 # #calculate total marks
 # subjects = [
@@ -25,11 +25,10 @@
 #     'Science',
 #     'English',
 #     'Computer',
-#     'History',
-#     'study_hours'
+#     'History'
 # ]
 # df['total']=df[subjects].sum(axis=1)
-# print([['name','total']])
+# print(df[['name','total']])
 
 # #calculare average
 # #number of subjects
@@ -191,12 +190,14 @@
 '''project 4'''
 
 import random
-cards = ["Diamonds", "Spades", "Hearts", "Clubs"]
-ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
+# cards = ["Diamonds", "Spades", "Hearts", "Clubs"]
+# ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 
-def picking_card():
-    card = random.choices(cards)
-    rank = random.choices(ranks)
-    return(f"The {rank} of {card}")
+# def picking_card():
+#     card = random.choices(cards)
+#     rank = random.choices(ranks)
+#     return(f"The {rank} of {card}")
 
-print(picking_card())
+# print(picking_card()
+
+''' project 4'''
