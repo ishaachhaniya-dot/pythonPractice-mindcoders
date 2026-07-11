@@ -201,3 +201,58 @@ import random
 # print(picking_card()
 
 ''' project 4'''
+'''rock paper scissor'''
+
+# import random
+# print("welcome to rock paper scissors game")
+
+# choices =["rock","paper","scissors"]
+
+# user = input("Enter rock, paper or scissor of theese : ").lower()
+# computer= random.choice(choices)
+
+# print("computer",computer)
+
+# if user==computer:
+#     print("it is a tie")
+# elif user=="rock" and computer=="scissors"or\
+#     user=="paper" and computer=="rock"or\
+#     user =="scissors" and computer=="paper":
+#     print("you win")
+# else:
+#     print("computer win")
+
+'''sales report'''
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+months=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+sales=pd.DataFrame({
+    'months':months,
+    'phones':[120,135,128,140,150,134,144,123,146,126,124,126],
+    'laptops':[80,82,83,84,85,89,76,86,74,63,56,68],
+    'tablets':[60,61,62,63,64,65,66,77,67,78,79,56]
+})
+
+print("sales data")
+print(sales)
+
+products=["phones","laptops","tablets"]
+
+for products in products:
+    data=sales[products]
+    mean=data.mean()
+    median=data.median()
+    std=data.std()
+    min=data.min()
+    max=data.max()
+    q1=data.quantile(0.25)
+    q3=data.quantile(0.75)
+    iqr=q3-q1
+
+
+corr=sales[products].corr()
+print(corr)

@@ -1219,12 +1219,12 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-marks = ['isha', 'harshi', 'khushi','anshi', 'bhoomika',]
-data = [23, 10, 35, 15, 12]
+# marks = ['isha', 'harshi', 'khushi','anshi', 'bhoomika',]
+# data = [23, 10, 35, 15, 12]
 
-plt.pie(data, labels=marks, autopct='%1.1f%%')
-plt.title(" Pie Chart of group of friends marks")
-plt.show()
+# plt.pie(data, labels=marks, autopct='%1.1f%%')
+# plt.title(" Pie Chart of group of friends marks")
+# plt.show()
 
 '''seaborn'''
 
@@ -1261,3 +1261,22 @@ import numpy as np
 # sns.pairplot(df[['marks','study_hours']],diag_kind='kde')
 # plt.show()
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+np.random.seed(42)
+study=np.random.uniform(2,10,60)
+marks=np.random.normal(0,10,60)+study*8
+marks=np.clip(marks,30,100)
+absent=10-study+np.random.normal(0,1,60)
+df=pd.DataFrame({
+    'study_hours':study,
+    'marks':marks,'absenses':absent})
+corr_matrix=df.corr()
+print(corr_matrix.round(2))
+plt.figure(figsize=(6,4))
+sns.heatmap(corr_matrix,annot=True,cmap='coolwarm',vmin=-1,vmax=1)
+plt.title("correlation matrix")
+plt.show()
