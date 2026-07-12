@@ -287,3 +287,26 @@ histogram, box plot, correlation heatmap, monthly trend line chart'''
 # for num in range(1,101):
 #     print(num)
  
+from sklearn.model_selection import train_test_split,cross_val_score
+import numpy as np
+
+np.random.seed(42)
+X=np.random.randn(500,5)
+Y=np.random.randint(0,2,500)
+
+X_train,X_test,Y_train,Y_test=train_test_split(
+    X,Y,test_size=0.2,random_state=42,stratify=Y
+)
+
+print(f'training samples:{len(X_train)}|tets samples:{len(X_test)}')
+
+from sklearn.ensemble import RandomForestClassifier
+model=RandomForestClassifier(
+    n_estimators=50,random_state=42
+)
+
+cv_scores=cross_val_score(model,X,Y,cv=5,scoring="accuracy")
+
+print(f'cv scores each fold:{cv_scores.round(3)}')
+
+print(f'mean:{cv_scores.mean():.4f}={cv_scores.std():.4f}')

@@ -1,6 +1,6 @@
 '''STATISTICS FOR AI/ML'''
 
-import numpy_practice as np
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
@@ -90,22 +90,23 @@ from scipy import stats
 
 
 
-# import numpy as np
-# import matplotlib.pyplot as plt
-# from scipy.stats import norm #normal distribution claculator
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm 
 
-mean_h, std_h = 165, 7
+'''normal distribution claculator'''
 
-#probability of being talller than 175 cm
-prob = 1- norm.cdf(175, mean_h, std_h)#camulative distribution function
-print(f'P(height > 175cm)= {prob: .4f} = {prob*100:.1f}%')
+# mean_h, std_h = 165, 7
+# # probability of being talller than 175 cm
+# prob = 1- norm.cdf(175, mean_h, std_h)#camulative distribution function
+# print(f'P(height > 175cm)= {prob: .4f} = {prob*100:.1f}%')
 
 # #The 68-95-99
 # print(f'68% of people: {mean_h-std_h :.0f}cm to {mean_h+std_h: .0f}cm')
 # print(f'95% of people: {mean_h-2*std_h: 0f}cm to {+2*std_h: .0f}cm')
 # print(f'99.7% of people: {mean_h-3*std_h:.0f}cm to {mean_h+3*std_h: .0f}')
 
-# from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.model_selection import train_test_split, cross_val_score
 
 # np.random.seed(42)
 # x = np.random.randn(500, 5)
@@ -117,7 +118,7 @@ print(f'P(height > 175cm)= {prob: .4f} = {prob*100:.1f}%')
 
 # print(f'Training samples: {len(x_train)} | Test samples: {len(x_test)}')
 
-# from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 # model = RandomForestClassifier(n_estimators=50 , random_state=42)
 # cv_scores = cross_val_score(model, x, y, cv = 5, scoring = 'accuracy')
 # print(f'cv score each fold:{cv_scores,round(3)}')
@@ -173,3 +174,101 @@ print(f'P(height > 175cm)= {prob: .4f} = {prob*100:.1f}%')
 # print(f'p-value:{p_value:.4f}')
 # print('Result:','Significant - B is better!' if p_value<0.05 else 'not significant-could be random')
 
+
+'''overall statistics'''
+import numpy as np
+import pandas as pd
+
+from scipy import stats
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+np.random.seed(42)
+marks=np.random.randint(0,50,2)
+study_hours=np.random.uniform(0,10,2)
+
+df=pd.DataFrame({"marks" : marks,
+                 "study hours":study_hours})
+# print(df)
+
+
+# print(df['marks'].mean)
+# print(df['marks'].median)
+mode=stats.mode(df['marks'])
+print(mode)
+
+print(df['marks'].max())
+print(df['marks'].min())
+print(df["marks"].sum())
+print(df["marks"].count())
+
+
+print(df['marks'].var())
+
+print(df['marks'].std())
+
+print(df['marks'].quantile(0.25))
+print(df['marks'].quantile(0.75))
+print(df['marks'].describe())
+
+df["Study_Hours"]=np.random.randint(1,10,100)
+df.corr(numeric_only=True)
+
+stats.pearsonr(df["Marks"],df["Study_Hours"])
+
+stats.spearmanr(df["Marks"],df["Study_Hours"])
+df.cov()
+np.cov(df["Marks"],df["Study_Hours"])
+stats.zscore(df["Marks"])
+
+mean=70
+std=10
+
+x=np.arange(30,111)
+
+y=stats.norm.pdf(x,mean,std)
+plt.plot(x,y)
+plt.show()
+
+stats.norm.cdf(80,70,10)
+
+data=np.random.normal(70,10,1000)
+
+np.random.uniform(1,10,100)
+plt.hist(df["Marks"],bins=10)
+plt.show()
+
+plt.boxplot(df["Marks"])
+plt.show()
+
+plt.scatter(df["Study_Hours"],df["Marks"])
+plt.show()
+
+mean=np.mean(df["Marks"])
+
+sem=stats.sem(df["Marks"])
+
+ci=stats.t.interval(
+    confidence=0.95,
+    df=len(df)-1,
+    loc=mean,
+    scale=sem
+)
+print(ci)
+
+
+stats.ttest_1samp(df["Marks"],70)
+
+
+group1=np.random.normal(70,10,50)
+group2=np.random.normal(75,10,50)
+stats.ttest_ind(group1,group2)
+
+before=np.random.normal(70,10,30)
+after=before+5
+stats.ttest_rel(before,after)
+
+table=[[20,30],
+       [25,25]]
+stats.chi2_contingency(table)
