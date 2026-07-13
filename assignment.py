@@ -287,26 +287,39 @@ histogram, box plot, correlation heatmap, monthly trend line chart'''
 # for num in range(1,101):
 #     print(num)
  
-from sklearn.model_selection import train_test_split,cross_val_score
-import numpy as np
+sentence = input("Enter a sentence: ")
 
-np.random.seed(42)
-X=np.random.randn(500,5)
-Y=np.random.randint(0,2,500)
+# Total characters (exclude spaces)
+characters = len(sentence.replace(" ", ""))
 
-X_train,X_test,Y_train,Y_test=train_test_split(
-    X,Y,test_size=0.2,random_state=42,stratify=Y
-)
+# Split sentence into words
+words = sentence.lower().split()
 
-print(f'training samples:{len(X_train)}|tets samples:{len(X_test)}')
+# Total words
+total_words = len(words)
 
-from sklearn.ensemble import RandomForestClassifier
-model=RandomForestClassifier(
-    n_estimators=50,random_state=42
-)
+# Count vowels and consonants
+vowels = "aeiou"
+vowel_count = 0
+consonant_count = 0
 
-cv_scores=cross_val_score(model,X,Y,cv=5,scoring="accuracy")
+for char in sentence.lower():
+    if char.isalpha():
+        if char in vowels:
+            vowel_count += 1
+        else:
+            consonant_count += 1
 
-print(f'cv scores each fold:{cv_scores.round(3)}')
+# Longest and shortest word
+longest_word = max(words, key=len)
+shortest_word = min(words, key=len)
 
-print(f'mean:{cv_scores.mean():.4f}={cv_scores.std():.4f}')
+
+print("- Text Analysis -")
+print("Total Characters :", characters)
+print("Total Words      :", total_words)
+print("Total Vowels     :", vowel_count)
+print("Total Consonants :", consonant_count)
+print("Longest Word     :", longest_word)
+print("Shortest Word    :", shortest_word)
+
