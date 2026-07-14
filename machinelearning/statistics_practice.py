@@ -96,15 +96,15 @@ from scipy.stats import norm
 
 '''normal distribution claculator'''
 
-# mean_h, std_h = 165, 7
-# # probability of being talller than 175 cm
-# prob = 1- norm.cdf(175, mean_h, std_h)#camulative distribution function
-# print(f'P(height > 175cm)= {prob: .4f} = {prob*100:.1f}%')
+mean_h, std_h = 165, 7
+# probability of being talller than 175 cm
+prob = 1- norm.cdf(175, mean_h, std_h)#camulative distribution function
+print(f'P(height > 175cm)= {prob: .4f} = {prob*100:.1f}%')
 
-# #The 68-95-99
-# print(f'68% of people: {mean_h-std_h :.0f}cm to {mean_h+std_h: .0f}cm')
-# print(f'95% of people: {mean_h-2*std_h: 0f}cm to {+2*std_h: .0f}cm')
-# print(f'99.7% of people: {mean_h-3*std_h:.0f}cm to {mean_h+3*std_h: .0f}')
+#The 68-95-99
+print(f'68% of people: {mean_h-std_h :.0f}cm to {mean_h+std_h: .0f}cm')
+print(f'95% of people: {mean_h-2*std_h: 0f}cm to {+2*std_h: .0f}cm')
+print(f'99.7% of people: {mean_h-3*std_h:.0f}cm to {mean_h+3*std_h: .0f}')
 
 from sklearn.model_selection import train_test_split, cross_val_score
 
@@ -152,27 +152,27 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 '''chi nd p value '''
-import numpy as np
-from scipy import stats 
-import matplotlib.pyplot as plt
+# import numpy as np
+# from scipy import stats 
+# import matplotlib.pyplot as plt
 
-#Data
-n_A,conv_A=1000,52
-n_B,conv_B=1000,68
-rate_A=conv_A/n_A
-rate_B=conv_B/n_B
+# #Data
+# n_A,conv_A=1000,52
+# n_B,conv_B=1000,68
+# rate_A=conv_A/n_A
+# rate_B=conv_B/n_B
 
-print(f'version A conversion rate:{rate_A*100:.1f}%')
-print(f'version B conversion rate:{rate_B*100:.1f}%')
-print(f'improvement: {(rate_B-rate_A)/rate_A*100:.1f}%')
+# print(f'version A conversion rate:{rate_A*100:.1f}%')
+# print(f'version B conversion rate:{rate_B*100:.1f}%')
+# print(f'improvement: {(rate_B-rate_A)/rate_A*100:.1f}%')
 
-#chi-square test for statistical significcant
-table=[[conv_A,n_A-conv_A],[conv_B,n_B-conv_B]]
-chi2,p_value,dof,expected=stats.chi2_contingency(table)
+# #chi-square test for statistical significcant
+# table=[[conv_A,n_A-conv_A],[conv_B,n_B-conv_B]]
+# chi2,p_value,dof,expected=stats.chi2_contingency(table)
 
-print(f'chisquare: {chi2:.4f}')
-print(f'p-value:{p_value:.4f}')
-print('Result:','Significant - B is better!' if p_value<0.05 else 'not significant-could be random')
+# print(f'chisquare: {chi2:.4f}')
+# print(f'p-value:{p_value:.4f}')
+# print('Result:','Significant - B is better!' if p_value<0.05 else 'not significant-could be random')
 
 
 '''overall statistics'''
