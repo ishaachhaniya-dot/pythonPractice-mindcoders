@@ -152,27 +152,27 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 '''chi nd p value '''
-# import numpy as np
-# from scipy import stats 
-# import matplotlib.pyplot as plt
+import numpy as np
+from scipy import stats 
+import matplotlib.pyplot as plt
 
-# #Data
-# n_A,conv_A=1000,52
-# n_B,conv_B=1000,68
-# rate_A=conv_A/n_A
-# rate_B=conv_B/n_B
+#Data
+n_A,conv_A=1000,52
+n_B,conv_B=1000,68
+rate_A=conv_A/n_A
+rate_B=conv_B/n_B
 
-# print(f'version A conversion rate:{rate_A*100:.1f}%')
-# print(f'version B conversion rate:{rate_B*100:.1f}%')
-# print(f'improvement: {(rate_B-rate_A)/rate_A*100:.1f}%')
+print(f'version A conversion rate:{rate_A*100:.1f}%')
+print(f'version B conversion rate:{rate_B*100:.1f}%')
+print(f'improvement: {(rate_B-rate_A)/rate_A*100:.1f}%')
 
-# #chi-square test for statistical significcant
-# table=[[conv_A,n_A-conv_A],[conv_B,n_B-conv_B]]
-# chi2,p_value,dof,expected=stats.chi2_contingency(table)
+#chi-square test for statistical significcant
+table=[[conv_A,n_A-conv_A],[conv_B,n_B-conv_B]]
+chi2,p_value,dof,expected=stats.chi2_contingency(table)
 
-# print(f'chisquare: {chi2:.4f}')
-# print(f'p-value:{p_value:.4f}')
-# print('Result:','Significant - B is better!' if p_value<0.05 else 'not significant-could be random')
+print(f'chisquare: {chi2:.4f}')
+print(f'p-value:{p_value:.4f}')
+print('Result:','Significant - B is better!' if p_value<0.05 else 'not significant-could be random')
 
 
 '''overall statistics'''
@@ -184,91 +184,91 @@ from scipy import stats
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-np.random.seed(42)
-marks=np.random.randint(0,50,2)
-study_hours=np.random.uniform(0,10,2)
+# np.random.seed(42)
+# marks=np.random.randint(0,50,2)
+# study_hours=np.random.uniform(0,10,2)
 
-df=pd.DataFrame({"marks" : marks,
-                 "study hours":study_hours})
-# print(df)
-
-
-# print(df['marks'].mean)
-# print(df['marks'].median)
-mode=stats.mode(df['marks'])
-print(mode)
-
-print(df['marks'].max())
-print(df['marks'].min())
-print(df["marks"].sum())
-print(df["marks"].count())
+# df=pd.DataFrame({"marks" : marks,
+#                  "study hours":study_hours})
+# # print(df)
 
 
-print(df['marks'].var())
+# # print(df['marks'].mean)
+# # print(df['marks'].median)
+# mode=stats.mode(df['marks'])
+# print(mode)
 
-print(df['marks'].std())
-
-print(df['marks'].quantile(0.25))
-print(df['marks'].quantile(0.75))
-print(df['marks'].describe())
-
-df["Study_Hours"]=np.random.randint(1,10,100)
-df.corr(numeric_only=True)
-
-stats.pearsonr(df["Marks"],df["Study_Hours"])
-
-stats.spearmanr(df["Marks"],df["Study_Hours"])
-df.cov()
-np.cov(df["Marks"],df["Study_Hours"])
-stats.zscore(df["Marks"])
-
-mean=70
-std=10
-
-x=np.arange(30,111)
-
-y=stats.norm.pdf(x,mean,std)
-plt.plot(x,y)
-plt.show()
-
-stats.norm.cdf(80,70,10)
-
-data=np.random.normal(70,10,1000)
-
-np.random.uniform(1,10,100)
-plt.hist(df["Marks"],bins=10)
-plt.show()
-
-plt.boxplot(df["Marks"])
-plt.show()
-
-plt.scatter(df["Study_Hours"],df["Marks"])
-plt.show()
-
-mean=np.mean(df["Marks"])
-
-sem=stats.sem(df["Marks"])
-
-ci=stats.t.interval(
-    confidence=0.95,
-    df=len(df)-1,
-    loc=mean,
-    scale=sem
-)
-print(ci)
+# print(df['marks'].max())
+# print(df['marks'].min())
+# print(df["marks"].sum())
+# print(df["marks"].count())
 
 
-stats.ttest_1samp(df["Marks"],70)
+# print(df['marks'].var())
+
+# print(df['marks'].std())
+
+# print(df['marks'].quantile(0.25))
+# print(df['marks'].quantile(0.75))
+# print(df['marks'].describe())
+
+# df["Study_Hours"]=np.random.randint(1,10,100)
+# df.corr(numeric_only=True)
+
+# stats.pearsonr(df["Marks"],df["Study_Hours"])
+
+# stats.spearmanr(df["Marks"],df["Study_Hours"])
+# df.cov()
+# np.cov(df["Marks"],df["Study_Hours"])
+# stats.zscore(df["Marks"])
+
+# mean=70
+# std=10
+
+# x=np.arange(30,111)
+
+# y=stats.norm.pdf(x,mean,std)
+# plt.plot(x,y)
+# plt.show()
+
+# stats.norm.cdf(80,70,10)
+
+# data=np.random.normal(70,10,1000)
+
+# np.random.uniform(1,10,100)
+# plt.hist(df["Marks"],bins=10)
+# plt.show()
+
+# plt.boxplot(df["Marks"])
+# plt.show()
+
+# plt.scatter(df["Study_Hours"],df["Marks"])
+# plt.show()
+
+# mean=np.mean(df["Marks"])
+
+# sem=stats.sem(df["Marks"])
+
+# ci=stats.t.interval(
+#     confidence=0.95,
+#     df=len(df)-1,
+#     loc=mean,
+#     scale=sem
+# )
+# print(ci)
 
 
-group1=np.random.normal(70,10,50)
-group2=np.random.normal(75,10,50)
-stats.ttest_ind(group1,group2)
+# stats.ttest_1samp(df["Marks"],70)
 
-before=np.random.normal(70,10,30)
-after=before+5
-stats.ttest_rel(before,after)
 
-table=[[20,30],
-       [25,25]]
-stats.chi2_contingency(table)
+# group1=np.random.normal(70,10,50)
+# group2=np.random.normal(75,10,50)
+# stats.ttest_ind(group1,group2)
+
+# before=np.random.normal(70,10,30)
+# after=before+5
+# stats.ttest_rel(before,after)
+
+# table=[[20,30],
+#        [25,25]]
+# stats.chi2_contingency(table)
